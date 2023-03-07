@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace BattleShip
 {
@@ -12,6 +13,8 @@ namespace BattleShip
 
         private Ray _mainRay;
         private const char Separetor = ',';
+
+        [SerializeField] private Ship debugShipProva;  //da togliere dopo
 
         private void Start()
         {
@@ -30,13 +33,18 @@ namespace BattleShip
         {
             _mainRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+            if (Input.GetKeyDown(ControllerMapping._clickSelection))
+                if (Physics.Raycast(_mainRay, out hit)) {
+                    string nameObjectHit = hit.collider.gameObject.name;
+                    Vector3 positionInWorld = hit.collider.gameObject.transform.position;
+                    Vector2 coordinatelogic = GetCoordinate(nameObjectHit);
+                    PositionShip(positionInWorld, coordinatelogic, debugShipProva);
+                }
+        }
 
-            if (Physics.Raycast(_mainRay, out hit)) {
-                string nameObjectHit = hit.collider.gameObject.name;
-                Vector2 coordinate = GetCoordinate(nameObjectHit);
-                Debug.Log(coordinate.x);
-                Debug.Log(coordinate.y);
-            }
+        private void PositionShip(Vector3 positionInWorld, Vector2 coordinatelogic, Ship ship)
+        {
+            Instantiate(ship, positionInWorld, Quaternion.identity);
         }
 
         private Vector2 GetCoordinate(string nameObject)
