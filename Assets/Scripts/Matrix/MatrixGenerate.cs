@@ -40,19 +40,22 @@ namespace BattleShip
 
         private GameObject GenerateTileObjectPlayer(int x, int y)
         {
-            GameObject tile = new GameObject(x + " " + y);
+            GameObject tile = new GameObject(x + "," + y);
             tile.transform.position = new Vector3(x - 9.5f, tile.transform.position.y + 0.01f, y - 9.5f);
             tile.transform.Rotate(new Vector3(90, 0));
+            BoxCollider boxTile = tile.AddComponent<BoxCollider>();
+            boxTile.size = new Vector3(1, 1, 0);
             Sprite sprite = Resources.Load<Sprite>("tileImage");
             var spriteRenderer = tile.AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = sprite;
+            tile.AddComponent<Tile>();
 
             return tile;
         }
 
         private GameObject GenerateTileObjectEnemy(int x, int y)
         {
-            GameObject tile = new GameObject(x + " " + y);
+            GameObject tile = new GameObject(x + "," + y);
             tile.transform.position = new Vector3(x + 10.5f, tile.transform.position.y + 0.01f, y - 9.5f);
             tile.transform.Rotate(new Vector3(90, 0));
             Sprite sprite = Resources.Load<Sprite>("tileImage");
