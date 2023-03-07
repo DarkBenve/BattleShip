@@ -1,0 +1,36 @@
+﻿@startuml
+package Scene1{
+'    class SelectionShipManager<<M, yellow>>
+    class MatrixGenerate<<M, yellow>>{
+        + matrixPlayer[ , ]: Tile
+        + matrixEnemy[ , ]: Tile
+        --
+        - GenerateGrid()
+        - SelectionShipManager()
+    }
+    enum ObjectInTile{
+        Water,
+        PartOfShip,
+        Ship
+    }
+    struct Tile {
+        inTileObject : ObjectInTile 
+        ship : Ship
+        --
+        +Tile(ShipData ship)
+    }
+    class Ship <<M, yellow>>{
+        +sizeShip : int
+        +positionX : int
+        +positionY : int
+        ---
+        +Start / Ship(int sizeShip, 
+        int posX, int posY)
+        + CheckSizeShip()
+    }
+    
+    ObjectInTile <|- Tile
+    MatrixGenerate o-- Tile
+    MatrixGenerate o-- Ship
+}
+@enduml
