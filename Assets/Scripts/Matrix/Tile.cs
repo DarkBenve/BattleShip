@@ -12,11 +12,11 @@ namespace BattleShip
     }
     public class Tile: MonoBehaviour
     {
-        private ObjectInTile _objectInTile;
+        public ObjectInTile objectInTile;
         public SpriteRenderer spriteRenderer;
         private void Awake()
         {
-            _objectInTile = ObjectInTile.Water;
+            objectInTile = ObjectInTile.Water;
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         }
 

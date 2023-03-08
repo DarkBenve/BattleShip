@@ -411,7 +411,6 @@ MonoBehaviour:
   widhtMatrix: 10
   heightMatrix: 10
   matrixPlayer: {fileID: 0}
-  matrixEnemy: {fileID: 0}
   debugShipProva: {fileID: -8925580399219260978, guid: 1fb789f1c49ea734fab33b360c120a36,
     type: 3}
 --- !u!1 &2013373710
@@ -519,6 +518,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8925580399219260978, guid: 1fb789f1c49ea734fab33b360c120a36,
+        type: 3}
+      propertyPath: sizeShip
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1856768031140079976, guid: 1fb789f1c49ea734fab33b360c120a36,
         type: 3}
       propertyPath: m_RootOrder

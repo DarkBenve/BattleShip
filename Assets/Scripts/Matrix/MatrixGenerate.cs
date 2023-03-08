@@ -5,7 +5,7 @@ namespace BattleShip
 {
     public class MatrixGenerate : MonoBehaviour
     {
-        protected Tile[,] _matrixPlayer;
+        public Tile[,] _matrixPlayer;
         protected Tile[,] _matrixEnemy;
 
         public MatrixGenerate(int width, int height, bool isMatrixPlayer)
@@ -16,29 +16,27 @@ namespace BattleShip
             if (isMatrixPlayer)
                 for (int x = 0; x < width; x++) {
                     for (int y = 0; y < height; y++) {
-                        _matrixPlayer = new Tile[x, y];
-                        GameObject tile = GenerateTileObjectPlayer(x, y);
-                        SetParentTile("ContainerMatrix", tile);
+                        _matrixPlayer[x,y] = GenerateTileObjectPlayer(x, y);
+                        SetParentTile("ContainerMatrix", _matrixPlayer[x, y]);
                     }
                 }
             else
                 for (int x = 0; x < width; x++) {
                     for (int y = 0; y < height; y++) {
-                        _matrixEnemy = new Tile[x, y];
-                        GameObject tile = GenerateTileObjectEnemy(x, y);
-                        SetParentTile("ContainerMatrix", tile);
+                        _matrixEnemy[x,y] = GenerateTileObjectPlayer(x, y);
+                        SetParentTile("ContainerMatrix", _matrixEnemy[x, y]);
                     }
                 }
         }
 
-        private void SetParentTile(string nameObject, GameObject tile)
+        private void SetParentTile(string nameObject, Tile tile)
         {
             var container = GameObject.Find(nameObject);
             Debug.Log(container);
             tile.transform.parent = container.transform;
         }
 
-        private GameObject GenerateTileObjectPlayer(int x, int y)
+        private Tile GenerateTileObjectPlayer(int x, int y)
         {
             GameObject tile = new GameObject(x + "," + y);
             tile.transform.position = new Vector3(x - 9.5f, tile.transform.position.y + 0.01f, y - 9.5f);
@@ -50,7 +48,7 @@ namespace BattleShip
             spriteRenderer.sprite = sprite;
             tile.AddComponent<Tile>();
 
-            return tile;
+            return tile.GetComponent<Tile>();
         }
 
         private GameObject GenerateTileObjectEnemy(int x, int y)
