@@ -15,9 +15,7 @@ namespace BattleShip
         private Ray _mainRay;
         private const char Separetor = ',';
 
-        private bool _isSelected;
         private Ship _shipSelected;
-        // private Ship obj;
 
         private void Start()
         {
@@ -30,14 +28,6 @@ namespace BattleShip
         private void Update()
         {
             CheckRaycast();
-            // if (_isSelected) {
-            //     obj = Instantiate(_shipSelected);
-            //     _isSelected = false;
-            // }
-            //
-            // if (obj != null) {
-            //     obj.transform.Translate(Input.mousePosition);
-            // }
         }
 
         private void CheckRaycast()
@@ -50,22 +40,31 @@ namespace BattleShip
                     Vector3 positionInWorld = hit.collider.gameObject.transform.position;
                     Vector2 coordinated = GetCoordinate(nameObjectHit);
                     if (_shipSelected.sizeShip == 1) {
-                        PositionShipSingleTile(positionInWorld, coordinated, _shipSelected);
+                        if (ManagerSelectionShip._instance.currentNSmallShip < ManagerSelectionShip.NMaxSmallShip) {
+                            ManagerSelectionShip._instance.currentNSmallShip++;
+                            PositionShipSingleTile(positionInWorld, coordinated, _shipSelected);
+                        }
                     }
 
                     if (_shipSelected.sizeShip == 2) {
-                        PositionShipDoubleTile(positionInWorld, coordinated, _shipSelected);
+                        if (ManagerSelectionShip._instance.currentNMediumShip < ManagerSelectionShip.NMaxMediumShip) {
+                            ManagerSelectionShip._instance.currentNMediumShip++;
+                            PositionShipDoubleTile(positionInWorld, coordinated, _shipSelected);
+                        }
+
                     }
 
                     if (_shipSelected.sizeShip == 3) {
-                        PositionShipTripleTile(positionInWorld, coordinated, _shipSelected);
+                        if (ManagerSelectionShip._instance.currentNBigShip < ManagerSelectionShip.NMaxBigShip) {
+                            ManagerSelectionShip._instance.currentNBigShip++;
+                            PositionShipTripleTile(positionInWorld, coordinated, _shipSelected);
+                        }
                     }
                 }
         }
 
         private Ship SelectShip(Ship ship)
         {
-            _isSelected = true;
             _shipSelected = ship;
             return ship;
         }
