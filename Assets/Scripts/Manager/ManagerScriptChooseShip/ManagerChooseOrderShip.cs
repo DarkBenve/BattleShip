@@ -15,7 +15,7 @@ namespace BattleShip
         private Ray _mainRay;
         private const char Separetor = ',';
 
-        private Ship _shipSelected;
+        public Ship shipSelected;
 
         private void Start()
         {
@@ -34,38 +34,51 @@ namespace BattleShip
         {
             _mainRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Input.GetKeyDown(ControllerMapping._clickSelection))
+            if (shipSelected != null) {
+                if (Input.GetKeyDown(ControllerMapping._clickSelection))
                 if (Physics.Raycast(_mainRay, out hit)) {
                     string nameObjectHit = hit.collider.gameObject.name;
                     Vector3 positionInWorld = hit.collider.gameObject.transform.position;
                     Vector2 coordinated = GetCoordinate(nameObjectHit);
-                    if (_shipSelected.sizeShip == 1) {
+                    if (shipSelected.sizeShip == 1) {
                         if (ManagerSelectionShip._instance.currentNSmallShip < ManagerSelectionShip.NMaxSmallShip) {
                             ManagerSelectionShip._instance.currentNSmallShip++;
-                            PositionShipSingleTile(positionInWorld, coordinated, _shipSelected);
+                            PositionShipSingleTile(positionInWorld, coordinated, shipSelected);
+                            if (ManagerSelectionShip._instance.currentNSmallShip == ManagerSelectionShip.NMaxSmallShip){
+                                ManagerSelectionShip._instance.currentNSmallShip = ManagerSelectionShip.NMaxSmallShip;
+                                shipSelected = null;
+                            }
                         }
                     }
 
-                    if (_shipSelected.sizeShip == 2) {
+                    if (shipSelected.sizeShip == 2) {
                         if (ManagerSelectionShip._instance.currentNMediumShip < ManagerSelectionShip.NMaxMediumShip) {
-                            ManagerSelectionShip._instance.currentNMediumShip++;
-                            PositionShipDoubleTile(positionInWorld, coordinated, _shipSelected);
+                            if (PositionShipDoubleTile(positionInWorld, coordinated, shipSelected))
+                                ManagerSelectionShip._instance.currentNMediumShip++;
+                            if (ManagerSelectionShip._instance.currentNMediumShip == ManagerSelectionShip.NMaxMediumShip){
+                                ManagerSelectionShip._instance.currentNMediumShip = ManagerSelectionShip.NMaxMediumShip;
+                                shipSelected = null;
+                            }
                         }
-
                     }
 
-                    if (_shipSelected.sizeShip == 3) {
+                    if (shipSelected.sizeShip == 3) {
                         if (ManagerSelectionShip._instance.currentNBigShip < ManagerSelectionShip.NMaxBigShip) {
-                            ManagerSelectionShip._instance.currentNBigShip++;
-                            PositionShipTripleTile(positionInWorld, coordinated, _shipSelected);
+                            if (PositionShipTripleTile(positionInWorld, coordinated, shipSelected))
+                                ManagerSelectionShip._instance.currentNBigShip++;
+                            if (ManagerSelectionShip._instance.currentNBigShip == ManagerSelectionShip.NMaxBigShip){
+                                ManagerSelectionShip._instance.currentNBigShip = ManagerSelectionShip.NMaxBigShip;
+                                shipSelected = null;
+                            }
                         }
                     }
                 }
+            }
         }
 
         private Ship SelectShip(Ship ship)
         {
-            _shipSelected = ship;
+            shipSelected = ship;
             return ship;
         }
 
@@ -76,19 +89,43 @@ namespace BattleShip
             Instantiate(ship, positionInWorld, Quaternion.identity);
         }
 
-        private void PositionShipDoubleTile(Vector3 positionWorld, Vector2 coordinatedLogic, Ship ship)
+        private bool PositionShipDoubleTile(Vector3 positionWorld, Vector2 coordinatedLogic, Ship ship)
         {
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
-            Instantiate(ship, positionWorld, Quaternion.identity);
+            int count = 0;
+            for (int i = 0; i < 1; i++) {
+                if (coordinatedLogic.y + i < heightMatrix - 1) {
+                    count++;
+                }
+            }
+
+            if (count == 1) {
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
+                Instantiate(ship, positionWorld, Quaternion.identity);
+                return true;
+            }
+            else
+                return false;
         }
 
-        private void PositionShipTripleTile(Vector3 positionWorld, Vector2 coordinatedLogic, Ship ship)
+        private bool PositionShipTripleTile(Vector3 positionWorld, Vector2 coordinatedLogic, Ship ship)
         {
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].objectInTile = ObjectInTile.PartOfShip;
-            Instantiate(ship, positionWorld, Quaternion.identity);
+            int count = 0;
+            for (int i = 0; i < 2; i++) {
+                if (coordinatedLogic.y + i < heightMatrix - 1) {
+                    count++;
+                }
+            }
+
+            if (count == 2) {
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].objectInTile = ObjectInTile.PartOfShip;
+                Instantiate(ship, positionWorld, Quaternion.identity);
+                return true;
+            }
+            else
+                return false;
         }
 
         private Vector2 GetCoordinate(string nameObject)

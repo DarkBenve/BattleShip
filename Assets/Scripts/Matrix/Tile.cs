@@ -12,17 +12,19 @@ namespace BattleShip
     }
     public class Tile: MonoBehaviour
     {
+        public ManagerChooseOrderShip instanceManager;
         public ObjectInTile objectInTile;
         public SpriteRenderer spriteRenderer;
         private void Awake()
         {
             objectInTile = ObjectInTile.Water;
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            instanceManager = GameObject.Find("ManagerChoseOrder").GetComponent<ManagerChooseOrderShip>();
         }
 
         private void OnMouseEnter()
         {
-            spriteRenderer.color = Color.red;
+            spriteRenderer.color = instanceManager.shipSelected != null ? Color.green : Color.red;
         }
 
         private void OnMouseExit()

@@ -15,6 +15,7 @@ namespace BattleShip
         [SerializeField] private TextMeshProUGUI countSmallShipUI;
         [SerializeField] private TextMeshProUGUI countMediumShipUI;
         [SerializeField] private TextMeshProUGUI countBigShipUI;
+        [SerializeField] private GameObject buttonSelectGoBattle;
 
         public const int NMaxSmallShip = 4;
         public const int NMaxMediumShip = 3;
@@ -32,6 +33,7 @@ namespace BattleShip
             else {
                 Destroy(this);
             }
+            buttonSelectGoBattle.SetActive(false);
         }
 
         private void Update()
@@ -39,6 +41,10 @@ namespace BattleShip
             countSmallShipUI.text = currentNSmallShip + "/" + NMaxSmallShip;
             countMediumShipUI.text = currentNMediumShip + "/" + NMaxMediumShip;
             countBigShipUI.text = currentNBigShip + "/" + NMaxBigShip;
+
+            if (currentNSmallShip == NMaxSmallShip && currentNMediumShip == NMaxMediumShip && currentNBigShip == NMaxBigShip) {
+                buttonSelectGoBattle.SetActive(true);
+            }
         }
 
         public void SelectShip(int sizeShipIndex)
