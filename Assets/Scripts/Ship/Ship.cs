@@ -8,6 +8,7 @@ namespace BattleShip
     {
         private int _sizeShip;
         private int _health;
+        //Bool Direction che mi permetterà di capire la nave in che modo è girata
 
         public ShipData(int sizeShip)
         {
