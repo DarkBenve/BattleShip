@@ -25,22 +25,6 @@ namespace BattleShip
         private void Start()
         {
             _shipData = new ShipData(sizeShip);
-            ShipCreate();
-        }
-
-        private void ShipCreate()
-        {
-            switch (sizeShip) {
-                case 1:
-                    Debug.Log("Grandezza 1-Tile");
-                    break;
-                case 2:
-                    Debug.Log("Grandezza 2-Tile");
-                    break;
-                case 3:
-                    Debug.Log("Grandezza 3-Tile");
-                    break;
-            }
         }
     }
 }
