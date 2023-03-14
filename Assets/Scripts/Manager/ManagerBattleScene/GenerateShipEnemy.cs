@@ -27,6 +27,14 @@ namespace BattleShip
 
         private IEnumerator UpdateShip()
         {
+
+            for (int k = 0; k < 5; k++) {
+                int w = Random.Range(0, 9);
+                int h = Random.Range(0, 9);
+                PositionInTileSingle(w, h);
+            }
+
+            yield return null;
             int i = 0;
             while (i < 3) {
                 int x = Random.Range(0, 9);
@@ -53,8 +61,14 @@ namespace BattleShip
 
         private void PositionInTileSingle(int x, int y)
         {
-            if (enemyMatrix._matrixEnemy[x, y].objectInTile == ObjectInTile.Water)
+            if (enemyMatrix._matrixEnemy[x, y].objectInTile == ObjectInTile.Water) {
                 enemyMatrix._matrixEnemy[x, y].objectInTile = ObjectInTile.Ship;
+                var instantiate = Instantiate(enemyShip[0], enemyMatrix._matrixEnemy[x, y].transform.position, Quaternion.identity);
+                enemyMatrix._matrixEnemy[x, y].ship = instantiate;
+                instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
+                instantiate.tag = "EnemyShip";
+                instantiate.transform.SetParent(_containerEnemyShip);
+            }
         }
 
         private bool PositionInTileDouble(int x, int y, int isRotate)

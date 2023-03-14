@@ -16,6 +16,7 @@ namespace BattleShip
         public ObjectInTile objectInTile;
         public SpriteRenderer spriteRenderer;
         public Ship ship;
+        protected bool _isSelectedThisTile;
 
         private void Awake()
         {
