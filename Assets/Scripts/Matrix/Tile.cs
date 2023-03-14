@@ -15,7 +15,13 @@ namespace BattleShip
         public ManagerChooseOrderShip instanceManager;
         public ObjectInTile objectInTile;
         public SpriteRenderer spriteRenderer;
+
         private void Awake()
+        {
+            Init();
+        }
+
+        protected virtual void Init()
         {
             objectInTile = ObjectInTile.Water;
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -23,6 +29,11 @@ namespace BattleShip
         }
 
         private void OnMouseEnter()
+        {
+            ChangeColor();
+        }
+
+        protected virtual void ChangeColor()
         {
             spriteRenderer.color = instanceManager.shipSelected != null ? Color.green : Color.red;
         }

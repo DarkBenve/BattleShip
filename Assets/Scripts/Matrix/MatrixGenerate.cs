@@ -6,7 +6,7 @@ namespace BattleShip
     public class MatrixGenerate : MonoBehaviour
     {
         public Tile[,] _matrixPlayer;
-        protected Tile[,] _matrixEnemy;
+        public Tile[,] _matrixEnemy;
 
         public MatrixGenerate(int width, int height, bool isMatrixPlayer)
         {
@@ -23,8 +23,8 @@ namespace BattleShip
             else
                 for (int x = 0; x < width; x++) {
                     for (int y = 0; y < height; y++) {
-                        _matrixEnemy[x,y] = GenerateTileObjectPlayer(x, y);
-                        SetParentTile("ContainerMatrix", _matrixEnemy[x, y]);
+                        _matrixEnemy[x,y] = GenerateTileObjectEnemy(x, y);
+                        SetParentTile("ContainerMatrixEnemy", _matrixEnemy[x, y]);
                     }
                 }
         }
@@ -51,16 +51,19 @@ namespace BattleShip
             return tile.GetComponent<Tile>();
         }
 
-        private GameObject GenerateTileObjectEnemy(int x, int y)
+        private Tile GenerateTileObjectEnemy(int x, int y)
         {
             GameObject tile = new GameObject(x + "," + y);
-            tile.transform.position = new Vector3(x + 10.5f, tile.transform.position.y + 0.01f, y - 9.5f);
+            tile.transform.position = new Vector3(x + 3.5f, tile.transform.position.y + 0.01f, y - 9.5f);
             tile.transform.Rotate(new Vector3(90, 0));
+            BoxCollider boxTile = tile.AddComponent<BoxCollider>();
+            boxTile.size = new Vector3(1, 1, 0);
             Sprite sprite = Resources.Load<Sprite>("tileImage");
             var spriteRenderer = tile.AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = sprite;
+            tile.AddComponent<TileEnemy>();
 
-            return tile;
+            return tile.GetComponent<Tile>();
         }
     }
 }
