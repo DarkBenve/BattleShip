@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace BattleShip
@@ -27,6 +28,7 @@ namespace BattleShip
         public int currentNBigShip;
 
         public bool isRotate;
+        public bool isReadyGoBattle;
         private TextMeshProUGUI _textRotate;
 
         private void Start()
@@ -52,7 +54,13 @@ namespace BattleShip
 
             if (currentNSmallShip == NMaxSmallShip && currentNMediumShip == NMaxMediumShip && currentNBigShip == NMaxBigShip) {
                 buttonSelectGoBattle.SetActive(true);
+                isReadyGoBattle = true;
             }
+        }
+
+        public void SelectGoBattleButton()
+        {
+            SceneManager.LoadScene("SceneBattle");
         }
 
         public void RotateShip()

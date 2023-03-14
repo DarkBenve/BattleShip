@@ -7,21 +7,23 @@ namespace BattleShip
 {
     public class ManagerChooseOrderShip : MonoBehaviour
     {
-        [SerializeField] private int widthMatrix;
-        [SerializeField] private int heightMatrix;
-
+        public int widthMatrix;
+        public int heightMatrix;
+        public Ship shipSelected;
         public MatrixGenerate matrixPlayer;
+
+        private Transform _containerPlayerTile;
         // public MatrixGenerate matrixEnemy;
 
         private Ray _mainRay;
         private const char Separetor = ',';
 
-        public Ship shipSelected;
 
         private void Start()
         {
             matrixPlayer = new MatrixGenerate(widthMatrix, heightMatrix, true);
             ManagerSelectionShip._instance._onSelect = SelectShip;
+            _containerPlayerTile = GameObject.FindGameObjectWithTag("Container").transform;
             // matrixEnemy = new MatrixGenerate(widhtMatrix, heightMatrix, false);
         }
 
@@ -92,9 +94,9 @@ namespace BattleShip
         private void PositionShipSingleTile(Vector3 positionInWorld, Vector2 coordinatedLogic, Ship ship)
         {
             //prima di posizionare la nave si sceglie la direzione che deve avere
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile =
-                ObjectInTile.Ship;
-            Instantiate(ship, positionInWorld, Quaternion.identity);
+            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.Ship;
+            var shipInTile = Instantiate(ship, positionInWorld, Quaternion.identity);
+            shipInTile.transform.SetParent(_containerPlayerTile);
         }
 
         private bool PositionShipDoubleTile(Vector3 positionWorld, Vector2 coordinatedLogic, Ship ship, RaycastHit hit)
@@ -113,6 +115,7 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
                     instantiate.transform.Rotate(new Vector3(0, 90, 0));
+                    instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }
                 else {
@@ -130,7 +133,8 @@ namespace BattleShip
                 if (count == 1) {
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
-                    Instantiate(ship, positionWorld, Quaternion.identity);
+                    var instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                    instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }
                 else {
@@ -159,6 +163,7 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
                     instantiate.transform.Rotate(new Vector3(0, 90, 0));
+                    instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }
                 else {
@@ -177,7 +182,8 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].objectInTile = ObjectInTile.PartOfShip;
-                    Instantiate(ship, positionWorld, Quaternion.identity);
+                    var instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                    instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }
                 else {
