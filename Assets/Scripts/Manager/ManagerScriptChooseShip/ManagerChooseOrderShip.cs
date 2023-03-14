@@ -96,6 +96,7 @@ namespace BattleShip
             //prima di posizionare la nave si sceglie la direzione che deve avere
             matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.Ship;
             var shipInTile = Instantiate(ship, positionInWorld, Quaternion.identity);
+            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = shipInTile;
             shipInTile.transform.SetParent(_containerPlayerTile);
         }
 
@@ -114,6 +115,8 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship = instantiate;
                     instantiate.transform.Rotate(new Vector3(0, 90, 0));
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
@@ -134,6 +137,8 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
                     var instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship = instantiate;
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }
@@ -162,6 +167,9 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].ship = instantiate;
                     instantiate.transform.Rotate(new Vector3(0, 90, 0));
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
@@ -182,7 +190,10 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].objectInTile = ObjectInTile.PartOfShip;
-                    var instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                    Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].ship = instantiate;
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }

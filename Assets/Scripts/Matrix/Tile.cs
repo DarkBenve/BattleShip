@@ -15,6 +15,7 @@ namespace BattleShip
         public ManagerChooseOrderShip instanceManager;
         public ObjectInTile objectInTile;
         public SpriteRenderer spriteRenderer;
+        public Ship ship;
 
         private void Awake()
         {
