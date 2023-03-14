@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 2027829577}
+  enemyShip: {fileID: 0}
   matrixPlayer: {fileID: 0}
 --- !u!4 &399047732
 Transform:
@@ -232,7 +233,7 @@ GameObject:
   - component: {fileID: 452021110}
   m_Layer: 0
   m_Name: SurfaceDebug_Enemy
-  m_TagString: Untagged
+  m_TagString: ContainerEnemyShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

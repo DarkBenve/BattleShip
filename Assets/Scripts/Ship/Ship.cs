@@ -4,11 +4,10 @@ using UnityEngine;
 
 namespace BattleShip
 {
-    struct ShipData
+    public struct ShipData
     {
-        private int _sizeShip;
-        private int _health;
-        //Bool Direction che mi permetterà di capire la nave in che modo è girata
+        public int _sizeShip;
+        public int _health;
 
         public ShipData(int sizeShip)
         {
@@ -19,12 +18,20 @@ namespace BattleShip
     public class Ship : MonoBehaviour
     {
         [Range(1, 3)][SerializeField] public int sizeShip;
-
-        private ShipData _shipData;
+        public bool isDeath;
+        public ShipData _shipData;
         private Vector3 _transformLocalScale;
         private void Start()
         {
             _shipData = new ShipData(sizeShip);
+            isDeath = false;
+        }
+
+        private void Update()
+        {
+            if (_shipData._health <= 0) {
+                isDeath = true;
+            }
         }
     }
 }
