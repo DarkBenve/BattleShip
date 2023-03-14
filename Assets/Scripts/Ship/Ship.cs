@@ -32,6 +32,11 @@ namespace BattleShip
             if (_shipData._health <= 0) {
                 isDeath = true;
             }
+
+            if (isDeath) {
+                gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+                Destroy(gameObject, 5f);
+            }
         }
     }
 }

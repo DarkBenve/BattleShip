@@ -73,6 +73,7 @@ namespace BattleShip
                         enemyMatrix._matrixEnemy[x, y].objectInTile = ObjectInTile.PartOfShip;
                         enemyMatrix._matrixEnemy[x + 1, y].objectInTile = ObjectInTile.PartOfShip;
                         var instantiate = Instantiate(enemyShip[1], enemyMatrix._matrixEnemy[x, y].transform.position, Quaternion.identity);
+                        instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x + 1, y].ship = instantiate;
                         instantiate.transform.Rotate(0, 90, 0);
@@ -98,6 +99,7 @@ namespace BattleShip
                         enemyMatrix._matrixEnemy[x, y].objectInTile = ObjectInTile.PartOfShip;
                         enemyMatrix._matrixEnemy[x, y + 1].objectInTile = ObjectInTile.PartOfShip;
                         var instantiate = Instantiate(enemyShip[1], enemyMatrix._matrixEnemy[x, y].transform.position, Quaternion.identity);
+                        instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x, y + 1].ship = instantiate;
                         instantiate.tag = "EnemyShip";
@@ -130,6 +132,7 @@ namespace BattleShip
                         enemyMatrix._matrixEnemy[x + 1, y].objectInTile = ObjectInTile.PartOfShip;
                         enemyMatrix._matrixEnemy[x + 2, y].objectInTile = ObjectInTile.PartOfShip;
                         var instantiate = Instantiate(enemyShip[2], enemyMatrix._matrixEnemy[x, y].transform.position, Quaternion.identity);
+                        instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x + 1, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x + 2, y].ship = instantiate;
@@ -157,9 +160,10 @@ namespace BattleShip
                         enemyMatrix._matrixEnemy[x, y + 1].objectInTile = ObjectInTile.PartOfShip;
                         enemyMatrix._matrixEnemy[x, y + 2].objectInTile = ObjectInTile.PartOfShip;
                         var instantiate = Instantiate(enemyShip[2], enemyMatrix._matrixEnemy[x, y].transform.position, Quaternion.identity);
+                        instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
-                        enemyMatrix._matrixEnemy[x + 1, y].ship = instantiate;
-                        enemyMatrix._matrixEnemy[x + 2, y].ship = instantiate;
+                        enemyMatrix._matrixEnemy[x, y + 1].ship = instantiate;
+                        enemyMatrix._matrixEnemy[x, y + 2].ship = instantiate;
                         instantiate.tag = "EnemyShip";
                         instantiate.transform.SetParent(_containerEnemyShip);
                         return true;
