@@ -5,36 +5,34 @@ namespace BattleShip
 {
     public class TileEnemy : Tile
     {
-        private Color _colorSelect;
         private void OnMouseDown()
         {
-            if (!_isSelectedThisTile) {
-                if (ship != null && objectInTile == ObjectInTile.Ship) {
-                    ship._shipData._health--;
-                    objectInTile = ObjectInTile.Water;
-                    spriteRenderer.color = Color.green;
-                    _colorSelect = Color.green;
-                    _isSelectedThisTile = true;
+            if (ManagerBattleSystem._isTurnPlayer) {
+                if (!isSelectedThisTile) {
+                    if (ship != null && objectInTile == ObjectInTile.Ship) {
+                        ship._shipData._health--;
+                        objectInTile = ObjectInTile.Water;
+                        spriteRenderer.color = Color.green;
+                        colorSelect = Color.green;
+                        isSelectedThisTile = true;
+                        ManagerBattleSystem._isTurnPlayer = true;
+                    }
+                    if (ship != null && objectInTile == ObjectInTile.PartOfShip) {
+                        ship._shipData._health--;
+                        objectInTile = ObjectInTile.Water;
+                        spriteRenderer.color = Color.green;
+                        colorSelect = Color.green;
+                        isSelectedThisTile = true;
+                        ManagerBattleSystem._isTurnPlayer = true;
+                    }
+                    if (ship == null && objectInTile == ObjectInTile.Water){
+                        spriteRenderer.color = Color.cyan;
+                        colorSelect = Color.cyan;
+                        isSelectedThisTile = true;
+                        ManagerBattleSystem._isTurnPlayer = false;
+                        ManagerBattleSystem._isTurnEnemy = true;
+                    }
                 }
-                if (ship != null && objectInTile == ObjectInTile.PartOfShip) {
-                    ship._shipData._health--;
-                    objectInTile = ObjectInTile.Water;
-                    spriteRenderer.color = Color.green;
-                    _colorSelect = Color.green;
-                    _isSelectedThisTile = true;
-                }
-                if (ship == null && objectInTile == ObjectInTile.Water){
-                    spriteRenderer.color = Color.cyan;
-                    _colorSelect = Color.cyan;
-                    _isSelectedThisTile = true;
-                }
-            }
-        }
-
-        private void Update()
-        {
-            if (_isSelectedThisTile) {
-                spriteRenderer.color = _colorSelect;
             }
         }
 

@@ -16,7 +16,8 @@ namespace BattleShip
         public ObjectInTile objectInTile;
         public SpriteRenderer spriteRenderer;
         public Ship ship;
-        protected bool _isSelectedThisTile;
+        public bool isSelectedThisTile;
+        public Color colorSelect;
 
         private void Awake()
         {
@@ -37,7 +38,16 @@ namespace BattleShip
 
         protected virtual void ChangeColor()
         {
-            spriteRenderer.color = instanceManager.shipSelected != null ? Color.green : Color.red;
+            if (!isSelectedThisTile) {
+                spriteRenderer.color = instanceManager.shipSelected != null ? Color.green : Color.red;
+            }
+        }
+
+        private void Update()
+        {
+            if (isSelectedThisTile) {
+                spriteRenderer.color = colorSelect;
+            }
         }
 
         private void OnMouseExit()

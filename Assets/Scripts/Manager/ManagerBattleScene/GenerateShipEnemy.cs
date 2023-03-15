@@ -8,6 +8,7 @@ namespace BattleShip
 {
     public class GenerateShipEnemy : MonoBehaviour
     {
+        public static GenerateShipEnemy _instance;
         public MatrixGenerate enemyMatrix;
         [SerializeField] private List<Ship> enemyShip;
 
@@ -20,6 +21,12 @@ namespace BattleShip
 
         private void Start()
         {
+            if (_instance == null) {
+                _instance = this;
+            }
+            else {
+                Destroy(this);
+            }
             enemyMatrix = new MatrixGenerate(10, 10, false);
             StartCoroutine(UpdateShip());
         }
@@ -65,6 +72,7 @@ namespace BattleShip
                 enemyMatrix._matrixEnemy[x, y].objectInTile = ObjectInTile.Ship;
                 var instantiate = Instantiate(enemyShip[0], enemyMatrix._matrixEnemy[x, y].transform.position, Quaternion.identity);
                 enemyMatrix._matrixEnemy[x, y].ship = instantiate;
+                enemyMatrix._matrixEnemy[x, y].ship.shipType = TypeShip.EnemyShip;
                 instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                 instantiate.tag = "EnemyShip";
                 instantiate.transform.SetParent(_containerEnemyShip);
@@ -90,6 +98,8 @@ namespace BattleShip
                         instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x + 1, y].ship = instantiate;
+                        enemyMatrix._matrixEnemy[x, y].ship.shipType = TypeShip.EnemyShip;
+                        enemyMatrix._matrixEnemy[x + 1, y].ship.shipType = TypeShip.EnemyShip;
                         instantiate.transform.Rotate(0, 90, 0);
                         instantiate.tag = "EnemyShip";
                         instantiate.transform.SetParent(_containerEnemyShip);
@@ -116,6 +126,8 @@ namespace BattleShip
                         instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x, y + 1].ship = instantiate;
+                        enemyMatrix._matrixEnemy[x, y].ship.shipType = TypeShip.EnemyShip;
+                        enemyMatrix._matrixEnemy[x, y + 1].ship.shipType = TypeShip.EnemyShip;
                         instantiate.tag = "EnemyShip";
                         instantiate.transform.SetParent(_containerEnemyShip);
                         return true;
@@ -150,6 +162,9 @@ namespace BattleShip
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x + 1, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x + 2, y].ship = instantiate;
+                        enemyMatrix._matrixEnemy[x, y].ship.shipType = TypeShip.EnemyShip;
+                        enemyMatrix._matrixEnemy[x + 1, y].ship.shipType = TypeShip.EnemyShip;
+                        enemyMatrix._matrixEnemy[x + 2, y].ship.shipType = TypeShip.EnemyShip;
                         instantiate.transform.Rotate(0, 90, 0);
                         instantiate.tag = "EnemyShip";
                         instantiate.transform.SetParent(_containerEnemyShip);
@@ -178,6 +193,9 @@ namespace BattleShip
                         enemyMatrix._matrixEnemy[x, y].ship = instantiate;
                         enemyMatrix._matrixEnemy[x, y + 1].ship = instantiate;
                         enemyMatrix._matrixEnemy[x, y + 2].ship = instantiate;
+                        enemyMatrix._matrixEnemy[x, y].ship.shipType = TypeShip.EnemyShip;
+                        enemyMatrix._matrixEnemy[x, y + 1].ship.shipType = TypeShip.EnemyShip;
+                        enemyMatrix._matrixEnemy[x, y + 2].ship.shipType = TypeShip.EnemyShip;
                         instantiate.tag = "EnemyShip";
                         instantiate.transform.SetParent(_containerEnemyShip);
                         return true;

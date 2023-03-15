@@ -97,6 +97,7 @@ namespace BattleShip
             matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.Ship;
             var shipInTile = Instantiate(ship, positionInWorld, Quaternion.identity);
             matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = shipInTile;
+            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
             shipInTile.transform.SetParent(_containerPlayerTile);
         }
 
@@ -117,6 +118,8 @@ namespace BattleShip
                     Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
                     instantiate.transform.Rotate(new Vector3(0, 90, 0));
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
@@ -139,6 +142,8 @@ namespace BattleShip
                     var instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship.shipType = TypeShip.PlayerShip;
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }
@@ -170,6 +175,9 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship = instantiate;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
                     instantiate.transform.Rotate(new Vector3(0, 90, 0));
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
@@ -194,6 +202,9 @@ namespace BattleShip
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship = instantiate;
                     matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].ship = instantiate;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship.shipType = TypeShip.PlayerShip;
+                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].ship.shipType = TypeShip.PlayerShip;
                     instantiate.transform.SetParent(_containerPlayerTile);
                     return true;
                 }

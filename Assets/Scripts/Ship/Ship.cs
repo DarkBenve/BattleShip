@@ -4,6 +4,11 @@ using UnityEngine;
 
 namespace BattleShip
 {
+    public enum TypeShip
+    {
+        PlayerShip,
+        EnemyShip
+    }
     public struct ShipData
     {
         public int _sizeShip;
@@ -18,9 +23,12 @@ namespace BattleShip
     public class Ship : MonoBehaviour
     {
         [Range(1, 3)][SerializeField] public int sizeShip;
+        public TypeShip shipType;
         public bool isDeath;
         public ShipData _shipData;
         private Vector3 _transformLocalScale;
+
+        private int _k = 0;
         private void Start()
         {
             _shipData = new ShipData(sizeShip);
@@ -34,8 +42,33 @@ namespace BattleShip
             }
 
             if (isDeath) {
+                if (shipType == TypeShip.EnemyShip) {
+                    DeathShipEnemy();
+                }
+
+                if (shipType == TypeShip.PlayerShip) {
+                    DeathShipPlayer();
+                }
+            }
+        }
+
+        private void DeathShipEnemy()
+        {
+            if (_k == 0) {
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
                 Destroy(gameObject, 5f);
+                GameManager._instance.nShipDeathEnemy++;
+                _k = 1;
+            }
+        }
+
+        private void DeathShipPlayer()
+        {
+            if (_k == 0) {
+                gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+                Destroy(gameObject, 5f);
+                GameManager._instance.nShipDeathPlayer++;
+                _k = 1;
             }
         }
     }
