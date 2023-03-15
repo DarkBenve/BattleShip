@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using UnityEngine;
+using Color = UnityEngine.Color;
 
 namespace BattleShip
 {
@@ -56,7 +57,8 @@ namespace BattleShip
         {
             if (_k == 0) {
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-                Destroy(gameObject, 5f);
+                gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+                Destroy(gameObject, 2.5f);
                 GameManager._instance.nShipDeathEnemy++;
                 _k = 1;
             }
@@ -66,7 +68,8 @@ namespace BattleShip
         {
             if (_k == 0) {
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-                Destroy(gameObject, 5f);
+                gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+                Destroy(gameObject, 2.5f);
                 GameManager._instance.nShipDeathPlayer++;
                 _k = 1;
             }

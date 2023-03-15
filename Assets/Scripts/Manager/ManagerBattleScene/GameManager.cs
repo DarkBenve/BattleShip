@@ -12,6 +12,8 @@ namespace BattleShip
     {
         [SerializeField] private Camera mainCamera;
         [SerializeField] private TextMeshProUGUI textDebugTurn;
+        [SerializeField] private TextMeshProUGUI textDebugShipHitPlayer;
+        [SerializeField] private TextMeshProUGUI textDebugShipHitEnemy;
         public static GameManager _instance;
         public SaveMatrixBattle matrixPlayer;
         private readonly Vector3 _cameraConstraintPosition = new Vector3(-0.0659999996f,11.8400002f,-9.8760004f);
@@ -30,6 +32,9 @@ namespace BattleShip
             else {
                 Destroy(this);
             }
+
+            textDebugShipHitEnemy.text = "Player1: \nNavi nemiche affondate = " + nShipDeathEnemy;
+            textDebugShipHitPlayer.text = "Player2: \nNavi nemiche affondate = "+ nShipDeathPlayer;
         }
 
         private void Start()
@@ -42,11 +47,11 @@ namespace BattleShip
 
         private void Update()
         {
-            if (nShipDeathEnemy == 10) {
+            if (nShipDeathEnemy == 9) {
                 textDebugTurn.text = "Hai Vinto";
             }
 
-            if (nShipDeathPlayer == 10) {
+            if (nShipDeathPlayer == 9) {
                 textDebugTurn.text = "Hai Perso";
             }
         }
@@ -54,14 +59,16 @@ namespace BattleShip
         private void FixedUpdate()
         {
             if (ManagerBattleSystem._isTurnEnemy) {
-                if (nShipDeathEnemy < 8) {
+                if (nShipDeathEnemy < 10) {
                     textDebugTurn.text = "Is Turn of Enemy";
+                    textDebugShipHitEnemy.text = "Player1: \nNavi nemiche affondate = " + nShipDeathEnemy;
                     StartCoroutine(ManagerBattleSystem.TurnEnemy());
                 }
             }
 
             if (ManagerBattleSystem._isTurnPlayer) {
                 textDebugTurn.text = "Is Turn of Player";
+                textDebugShipHitPlayer.text = "Player2: \nNavi nemiche affondate = "+ nShipDeathPlayer;
             }
         }
 
