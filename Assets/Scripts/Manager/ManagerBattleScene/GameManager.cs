@@ -49,11 +49,11 @@ namespace BattleShip
 
         private void Update()
         {
-            if (nShipDeathEnemy >= 10) {
+            if (nShipDeathEnemy >= 9) {
                 textDebugTurn.text = "Hai Vinto";
                 panelEndGame.SetActive(true);
             }
-            else if (nShipDeathPlayer >= 10) {
+            else if (nShipDeathPlayer >= 9) {
                 textDebugTurn.text = "Hai Perso";
                 panelEndGame.SetActive(true);
             }

@@ -34,11 +34,13 @@ namespace BattleShip
 
         private IEnumerator UpdateShip()
         {
-
-            for (int k = 0; k < 5; k++) {
+            int k = 0;
+            while (k < 4) {
                 int w = Random.Range(0, 9);
                 int h = Random.Range(0, 9);
-                PositionInTileSingle(w, h);
+                if (PositionInTileSingle(w, h)) {
+                    k++;
+                }
             }
 
             yield return null;
@@ -66,7 +68,7 @@ namespace BattleShip
             yield return null;
         }
 
-        private void PositionInTileSingle(int x, int y)
+        private bool PositionInTileSingle(int x, int y)
         {
             if (enemyMatrix._matrixEnemy[x, y].objectInTile == ObjectInTile.Water) {
                 enemyMatrix._matrixEnemy[x, y].objectInTile = ObjectInTile.Ship;
@@ -76,7 +78,10 @@ namespace BattleShip
                 instantiate.GetComponentInChildren<MeshRenderer>().enabled = false;
                 instantiate.tag = "EnemyShip";
                 instantiate.transform.SetParent(_containerEnemyShip);
+                return true;
             }
+
+            return false;
         }
 
         private bool PositionInTileDouble(int x, int y, int isRotate)
