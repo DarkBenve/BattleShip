@@ -1,14 +1,41 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace BattleShip
 {
     public class MainMenu : MonoBehaviour
     {
+        [SerializeField] private GameObject panelMultiplayerChoose;
+        private void Start()
+        {
+            ClosePanelMultiplayer();
+        }
+
         public void StartSingleGame()
         {
             SceneManager.LoadScene("OrderShip");
         }
+
+        #region MultiPlayerSelection
+
+        public void OpenPanelMultiplayer()
+        {
+            panelMultiplayerChoose.SetActive(true);
+        }
+
+        public void ClosePanelMultiplayer()
+        {
+            panelMultiplayerChoose.SetActive(false);
+        }
+
+        public void MultiPlayerStart()
+        {
+
+        }
+
+        #endregion
 
         public void Restart()
         {
