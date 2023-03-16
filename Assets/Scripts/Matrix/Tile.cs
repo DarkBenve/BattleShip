@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace BattleShip
@@ -14,7 +15,7 @@ namespace BattleShip
     {
         public ManagerChooseOrderShip instanceManager;
         public ObjectInTile objectInTile;
-        public SpriteRenderer spriteRenderer;
+        public MeshRenderer meshRenderer;
         public Ship ship;
         public bool isSelectedThisTile;
         public Color colorSelect;
@@ -27,8 +28,9 @@ namespace BattleShip
         protected virtual void Init()
         {
             objectInTile = ObjectInTile.Water;
-            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            meshRenderer = gameObject.GetComponent<MeshRenderer>();
             instanceManager = GameObject.Find("ManagerChoseOrder").GetComponent<ManagerChooseOrderShip>();
+            meshRenderer.material.color = Color.cyan;
         }
 
         private void OnMouseEnter()
@@ -38,21 +40,23 @@ namespace BattleShip
 
         protected virtual void ChangeColor()
         {
-            if (!isSelectedThisTile) {
-                spriteRenderer.color = instanceManager.shipSelected != null ? Color.green : Color.red;
+            if (!isSelectedThisTile && SceneManager.GetActiveScene().name != "SceneBattle") {
+                meshRenderer.material.color = instanceManager.shipSelected != null ? Color.green : Color.red;
+            }else if (!isSelectedThisTile && SceneManager.GetActiveScene().name == "SceneBattle") {
+                meshRenderer.material.color = Color.white;
             }
         }
 
         private void Update()
         {
             if (isSelectedThisTile) {
-                spriteRenderer.color = colorSelect;
+                meshRenderer.material.color = colorSelect;
             }
         }
 
         private void OnMouseExit()
         {
-            spriteRenderer.color = Color.white;
+            meshRenderer.material.color = Color.cyan;
         }
     }
 }

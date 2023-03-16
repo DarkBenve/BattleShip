@@ -26,7 +26,7 @@ namespace BattleShip
                 }
                 else if (SaveMatrixBattle._instance._matrix[x, y].objectInTile == ObjectInTile.Water) {
                     SaveMatrixBattle._instance._matrix[x, y].isSelectedThisTile = true;
-                    SaveMatrixBattle._instance._matrix[x, y].colorSelect = Color.cyan;
+                    SaveMatrixBattle._instance._matrix[x, y].colorSelect = Color.blue;
                     return false;
                 }
             }

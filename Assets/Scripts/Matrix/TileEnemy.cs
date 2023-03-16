@@ -12,7 +12,7 @@ namespace BattleShip
                     if (ship != null && objectInTile == ObjectInTile.Ship) {
                         ship._shipData._health--;
                         objectInTile = ObjectInTile.Water;
-                        spriteRenderer.color = Color.green;
+                        meshRenderer.material.color = Color.green;
                         colorSelect = Color.green;
                         isSelectedThisTile = true;
                         ManagerBattleSystem._isTurnPlayer = true;
@@ -20,14 +20,14 @@ namespace BattleShip
                     if (ship != null && objectInTile == ObjectInTile.PartOfShip) {
                         ship._shipData._health--;
                         objectInTile = ObjectInTile.Water;
-                        spriteRenderer.color = Color.green;
+                        meshRenderer.material.color = Color.green;
                         colorSelect = Color.green;
                         isSelectedThisTile = true;
                         ManagerBattleSystem._isTurnPlayer = true;
                     }
                     if (ship == null && objectInTile == ObjectInTile.Water){
-                        spriteRenderer.color = Color.cyan;
-                        colorSelect = Color.cyan;
+                        meshRenderer.material.color = Color.blue;
+                        colorSelect = Color.blue;
                         isSelectedThisTile = true;
                         ManagerBattleSystem._isTurnPlayer = false;
                         ManagerBattleSystem._isTurnEnemy = true;
@@ -39,12 +39,13 @@ namespace BattleShip
         protected override void Init()
         {
             objectInTile = ObjectInTile.Water;
-            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            meshRenderer = gameObject.GetComponent<MeshRenderer>();
+            meshRenderer.material.color = Color.cyan;
         }
 
         protected override void ChangeColor()
         {
-            spriteRenderer.color = Color.blue;
+            meshRenderer.material.color = Color.white;
         }
     }
 }

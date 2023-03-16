@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace BattleShip
 {
@@ -17,7 +18,10 @@ namespace BattleShip
             else {
                 Destroy(this);
             }
-            _managerOrderShip = FindObjectOfType<ManagerChooseOrderShip>();
+
+            if (SceneManager.GetActiveScene().name != "SceneBattle") {
+                _managerOrderShip = FindObjectOfType<ManagerChooseOrderShip>();
+            }
             _matrix = new Tile[_managerOrderShip.widthMatrix, _managerOrderShip.heightMatrix];
         }
 

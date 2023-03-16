@@ -126,7 +126,7 @@ namespace BattleShip
                 }
                 else {
                     Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.spriteRenderer.color = Color.red;
+                    tile.meshRenderer.material.color = Color.red;
                 }
             }
             else {
@@ -149,7 +149,7 @@ namespace BattleShip
                 }
                 else {
                     Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.spriteRenderer.color = Color.red;
+                    tile.meshRenderer.material.color = Color.red;
                 }
             }
             return default;
@@ -184,7 +184,7 @@ namespace BattleShip
                 }
                 else {
                     Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.spriteRenderer.color = Color.red;
+                    tile.meshRenderer.material.color = Color.red;
                 }
             }
             else {
@@ -210,7 +210,7 @@ namespace BattleShip
                 }
                 else {
                     Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.spriteRenderer.color = Color.red;
+                    tile.meshRenderer.material.color = Color.red;
                 }
             }
 

@@ -13,6 +13,7 @@ namespace BattleShip
             _matrixPlayer = new Tile[width, height];
             _matrixEnemy = new Tile[width, height];
 
+
             if (isMatrixPlayer)
                 for (int x = 0; x < width; x++) {
                     for (int y = 0; y < height; y++) {
@@ -39,13 +40,16 @@ namespace BattleShip
         private Tile GenerateTileObjectPlayer(int x, int y)
         {
             GameObject tile = new GameObject(x + "," + y);
-            tile.transform.position = new Vector3(x - 9.5f, tile.transform.position.y + 0.01f, y - 9.5f);
-            tile.transform.Rotate(new Vector3(90, 0));
-            BoxCollider boxTile = tile.AddComponent<BoxCollider>();
-            boxTile.size = new Vector3(1, 1, 0);
-            Sprite sprite = Resources.Load<Sprite>("tileImage");
-            var spriteRenderer = tile.AddComponent<SpriteRenderer>();
-            spriteRenderer.sprite = sprite;
+            tile.transform.position = new Vector3(x * 1.5f - 15f, tile.transform.position.y + 0.01f, y * 1.5f - 15f);
+            tile.transform.Rotate(new Vector3(0, 0));
+            Mesh mesh = Resources.Load<Mesh>("Hex19");
+            Material meshMaterial = Resources.Load<Material>("HexagonsShared");
+            MeshFilter meshFilter = tile.AddComponent<MeshFilter>();
+            meshFilter.mesh = mesh;
+            MeshRenderer meshRender = tile.AddComponent<MeshRenderer>();
+            meshRender.material = meshMaterial;
+            MeshCollider boxTile = tile.AddComponent<MeshCollider>();
+            boxTile.sharedMesh = mesh;
             tile.AddComponent<Tile>();
 
             return tile.GetComponent<Tile>();
@@ -54,13 +58,16 @@ namespace BattleShip
         private Tile GenerateTileObjectEnemy(int x, int y)
         {
             GameObject tile = new GameObject(x + "," + y);
-            tile.transform.position = new Vector3(x + 3.5f, tile.transform.position.y + 0.01f, y - 9.5f);
-            tile.transform.Rotate(new Vector3(90, 0));
-            BoxCollider boxTile = tile.AddComponent<BoxCollider>();
-            boxTile.size = new Vector3(1, 1, 0);
-            Sprite sprite = Resources.Load<Sprite>("tileImage");
-            var spriteRenderer = tile.AddComponent<SpriteRenderer>();
-            spriteRenderer.sprite = sprite;
+            tile.transform.position = new Vector3(x * 1.5f + 18.5f, tile.transform.position.y + 0.01f, y * 1.5f - 15f);
+            tile.transform.Rotate(new Vector3(0, 0));
+            Mesh mesh = Resources.Load<Mesh>("Hex19");
+            Material meshMaterial = Resources.Load<Material>("HexagonsShared");
+            MeshFilter meshFilter = tile.AddComponent<MeshFilter>();
+            meshFilter.mesh = mesh;
+            MeshRenderer meshRender = tile.AddComponent<MeshRenderer>();
+            meshRender.material = meshMaterial;
+            MeshCollider boxTile = tile.AddComponent<MeshCollider>();
+            boxTile.sharedMesh = mesh;
             tile.AddComponent<TileEnemy>();
 
             return tile.GetComponent<Tile>();
