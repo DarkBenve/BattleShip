@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 55e64e617a8bfff4ba846574e2651eb9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.56158954, g: 0.72180885, b: 0.817857, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2948,24 +2948,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4706806575869917563, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 4706806575959870774, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 4706806576632937165, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 4706806577509453056, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 4706806577171642945, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 4706806575616020173, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 1392900030385757955, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 1392900030431193934, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 1392900031100050613, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 1392900031968226168, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 1392900031635086393, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 1392900030102513845, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 5030050883622333993, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 5254859168104641306, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 5254859167711725399, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 5254859167307116716, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 5254859166438803297, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 5254859166776799264, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
-    - {fileID: 5254859168324961452, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d12895781c8f1c449c1cc6767e2bc9d, type: 3}

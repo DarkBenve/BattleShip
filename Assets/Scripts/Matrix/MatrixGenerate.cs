@@ -40,7 +40,8 @@ namespace BattleShip
         private Tile GenerateTileObjectPlayer(int x, int y)
         {
             GameObject tile = new GameObject(x + "," + y);
-            tile.transform.position = new Vector3(x * 1.5f - 15f, tile.transform.position.y + 0.01f, y * 1.5f - 15f);
+            tile.transform.position = new Vector3(x * 2f - 17, tile.transform.position.y + 0.01f, y * 2f - 17.5f);
+            tile.transform.localScale = new Vector3(1.5f, 1, 1.5f);
             tile.transform.Rotate(new Vector3(0, 0));
             Mesh mesh = Resources.Load<Mesh>("Hex19");
             Material meshMaterial = Resources.Load<Material>("HexagonsShared");
@@ -58,7 +59,8 @@ namespace BattleShip
         private Tile GenerateTileObjectEnemy(int x, int y)
         {
             GameObject tile = new GameObject(x + "," + y);
-            tile.transform.position = new Vector3(x * 1.5f + 18.5f, tile.transform.position.y + 0.01f, y * 1.5f - 15f);
+            tile.transform.position = new Vector3(x * 2 + 17f, tile.transform.position.y + 0.01f, y * 2 - 17.5f);
+            tile.transform.localScale = new Vector3(1.5f, 1, 1.5f);
             tile.transform.Rotate(new Vector3(0, 0));
             Mesh mesh = Resources.Load<Mesh>("Hex19");
             Material meshMaterial = Resources.Load<Material>("HexagonsShared");
