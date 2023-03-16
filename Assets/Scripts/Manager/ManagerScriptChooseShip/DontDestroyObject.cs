@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
 namespace BattleShip
@@ -24,6 +25,13 @@ namespace BattleShip
                 }
             }
             DontDestroyOnLoad(gameObject);
+        }
+
+        private void Update()
+        {
+            if (SceneManager.GetActiveScene().buildIndex < 1) {
+                DestroyImmediate(gameObject);
+            }
         }
     }
 }

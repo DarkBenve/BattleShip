@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace BattleShip
@@ -14,6 +15,7 @@ namespace BattleShip
         [SerializeField] private TextMeshProUGUI textDebugTurn;
         [SerializeField] private TextMeshProUGUI textDebugShipHitPlayer;
         [SerializeField] private TextMeshProUGUI textDebugShipHitEnemy;
+        [SerializeField] private GameObject panelEndGame;
         public static GameManager _instance;
         public SaveMatrixBattle matrixPlayer;
         private readonly Vector3 _cameraConstraintPosition = new Vector3(-0.0659999996f,11.8400002f,-9.8760004f);
@@ -32,7 +34,7 @@ namespace BattleShip
             else {
                 Destroy(this);
             }
-
+            panelEndGame.SetActive(false);
             textDebugShipHitEnemy.text = "Player1: \nNavi nemiche affondate = " + nShipDeathEnemy;
             textDebugShipHitPlayer.text = "Player2: \nNavi nemiche affondate = "+ nShipDeathPlayer;
         }
@@ -47,12 +49,13 @@ namespace BattleShip
 
         private void Update()
         {
-            if (nShipDeathEnemy == 9) {
+            if (nShipDeathEnemy >= 10) {
                 textDebugTurn.text = "Hai Vinto";
+                panelEndGame.SetActive(true);
             }
-
-            if (nShipDeathPlayer == 9) {
+            else if (nShipDeathPlayer >= 10) {
                 textDebugTurn.text = "Hai Perso";
+                panelEndGame.SetActive(true);
             }
         }
 
