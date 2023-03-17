@@ -8,11 +8,19 @@ namespace BattleShip
         public Tile[,] _matrixPlayer;
         public Tile[,] _matrixEnemy;
 
+        private MainMenu _mainMenu;
+
+
+        private void Start()
+        {
+            _mainMenu = FindObjectOfType<MainMenu>();
+            _mainMenu._onReset += DestroyMatrix;
+        }
+
         public MatrixGenerate(int width, int height, bool isMatrixPlayer)
         {
             _matrixPlayer = new Tile[width, height];
             _matrixEnemy = new Tile[width, height];
-
 
             if (isMatrixPlayer)
                 for (int x = 0; x < width; x++) {
@@ -74,6 +82,17 @@ namespace BattleShip
 
             return tile.GetComponent<Tile>();
         }
+
+
+        private void DestroyMatrix()
+        {
+            for (int i = 0; i < 10; i++) {
+                for (int j = 0; j < 10; j++) {
+                    _matrixPlayer[i, j] = null;
+                }
+            }
+        }
+
     }
 }
 

@@ -49,6 +49,8 @@ namespace BattleShip
 
         private void Update()
         {
+            textDebugShipHitEnemy.text = "Player1: \nNavi nemiche affondate = " + nShipDeathEnemy;
+            textDebugShipHitPlayer.text = "Player2: \nNavi nemiche affondate = "+ nShipDeathPlayer;
             if (nShipDeathEnemy >= 9) {
                 textDebugTurn.text = "Hai Vinto";
                 panelEndGame.SetActive(true);
@@ -64,14 +66,12 @@ namespace BattleShip
             if (ManagerBattleSystem._isTurnEnemy) {
                 if (nShipDeathEnemy < 10) {
                     textDebugTurn.text = "Is Turn of Enemy";
-                    textDebugShipHitEnemy.text = "Player1: \nNavi nemiche affondate = " + nShipDeathEnemy;
                     StartCoroutine(ManagerBattleSystem.TurnEnemy());
                 }
             }
 
             if (ManagerBattleSystem._isTurnPlayer) {
                 textDebugTurn.text = "Is Turn of Player";
-                textDebugShipHitPlayer.text = "Player2: \nNavi nemiche affondate = "+ nShipDeathPlayer;
             }
         }
 

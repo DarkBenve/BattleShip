@@ -10,6 +10,8 @@ namespace BattleShip
         [HideInInspector]
         public string objectId;
 
+        private MainMenu _mainMenu;
+
         private void Awake()
         {
             objectId = name + transform.position.ToString() + transform.eulerAngles.ToString();
@@ -25,6 +27,8 @@ namespace BattleShip
                 }
             }
             DontDestroyOnLoad(gameObject);
+            _mainMenu = FindObjectOfType<MainMenu>();
+            _mainMenu._onReset += DestroyObject;
         }
 
         private void Update()
@@ -32,6 +36,11 @@ namespace BattleShip
             if (SceneManager.GetActiveScene().buildIndex < 1) {
                 DestroyImmediate(gameObject);
             }
+        }
+
+        private void DestroyObject()
+        {
+            DestroyImmediate(gameObject);
         }
     }
 }

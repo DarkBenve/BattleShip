@@ -58,8 +58,8 @@ namespace BattleShip
             if (_k == 0) {
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
                 gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
-                Destroy(gameObject, 2.5f);
                 GameManager._instance.nShipDeathEnemy++;
+                // Destroy(gameObject, 2.5f);
                 _k = 1;
             }
         }
@@ -69,8 +69,8 @@ namespace BattleShip
             if (_k == 0) {
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
                 gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
-                Destroy(gameObject, 2.5f);
                 GameManager._instance.nShipDeathPlayer++;
+                // Destroy(gameObject, 2.5f);
                 _k = 1;
             }
         }

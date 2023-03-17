@@ -48,9 +48,9 @@ namespace BattleShip
 
         private void Update()
         {
-            countSmallShipUI.text = currentNSmallShip + "/" + NMaxSmallShip;
-            countMediumShipUI.text = currentNMediumShip + "/" + NMaxMediumShip;
-            countBigShipUI.text = currentNBigShip + "/" + NMaxBigShip;
+            countSmallShipUI.text = "Ship Small\n" + currentNSmallShip + "/" + NMaxSmallShip;
+            countMediumShipUI.text = "Ship Medium\n" + currentNMediumShip + "/" + NMaxMediumShip;
+            countBigShipUI.text = "Ship Big\n" + currentNBigShip + "/" + NMaxBigShip;
 
             if (currentNSmallShip == NMaxSmallShip && currentNMediumShip == NMaxMediumShip && currentNBigShip == NMaxBigShip) {
                 buttonSelectGoBattle.SetActive(true);
