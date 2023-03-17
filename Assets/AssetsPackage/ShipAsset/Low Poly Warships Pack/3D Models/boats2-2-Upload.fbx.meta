@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 89aabd9aa57f4af4ba6230f70395078b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Building 1 Blue.001
+    100004: Building 1 Green.002
+    100006: Building 1 Purple.003
+    100008: Building 1 Red
+    100010: Building 2 Blue.010
+    100012: Building 2 Green.013
+    100014: Building 2 Purple.022
+    100016: Building 2 Red.001
+    100018: Building 3 Blue.002
+    100020: Building 3 Blue.003
+    100022: Building 3 Green.004
+    100024: Building 3 Green.005
+    100026: Building 3 Purple.006
+    100028: Building 3 Purple.007
+    100030: Building 3 Red
+    100032: Building 3 Red.001
+    100034: Building 4 Blue.020
+    100036: Building 4 Green.023
+    100038: Building 4 Purple.042
+    100040: Building 4 Red.001
+    100042: Building 5 Blue.012
+    100044: Building 5 Blue.013
+    100046: Building 5 Blue.014
+    100048: Building 5 Blue.015
+    100050: Building 5 Blue.016
+    100052: Building 5 Blue.017
+    100054: Building 5 Blue.018
+    100056: Building 5 Blue.019
+    100058: Building 5 Blue.021
+    100060: Building 5 Blue.023
+    100062: Building 5 Green.024
+    100064: Building 5 Green.026
+    100066: Building 5 Green.028
+    100068: Building 5 Green.029
+    100070: Building 5 Green.030
+    100072: Building 5 Green.031
+    100074: Building 5 Green.032
+    100076: Building 5 Green.033
+    100078: Building 5 Green.034
+    100080: Building 5 Green.035
+    100082: Building 5 Purple.036
+    100084: Building 5 Purple.037
+    100086: Building 5 Purple.038
+    100088: Building 5 Purple.039
+    100090: Building 5 Purple.040
+    100092: Building 5 Purple.041
+    100094: Building 5 Purple.042
+    100096: Building 5 Purple.043
+    100098: Building 5 Purple.045
+    100100: Building 5 Purple.047
+    100102: Building 5 Red
+    100104: Building 5 Red.002
+    100106: Building 5 Red.004
+    100108: Building 5 Red.005
+    100110: Building 5 Red.006
+    100112: Building 5 Red.007
+    100114: Building 5 Red.008
+    100116: Building 5 Red.009
+    100118: Building 5 Red.010
+    100120: Building 5 Red.011
+    100122: Light House Blue.002
+    100124: Light House Blue.003
+    100126: Light House Green.004
+    100128: Light House Green.005
+    100130: Light House Purple.006
+    100132: Light House Purple.007
+    100134: Light House Red
+    100136: Light House Red.001
+    100138: Platform Blue
+    100140: Platform Blue.001
+    100142: Platform Blue.002
+    100144: Platform Blue.003
+    100146: Platform Blue.004
+    100148: Platform Blue.005
+    100150: Platform Blue.006
+    100152: Platform Green
+    100154: Platform Green.001
+    100156: Platform Green.002
+    100158: Platform Green.003
+    100160: Platform Green.004
+    100162: Platform Green.005
+    100164: Platform Green.006
+    100166: Platform Purple
+    100168: Platform Purple.001
+    100170: Platform Purple.002
+    100172: Platform Purple.003
+    100174: Platform Purple.004
+    100176: Platform Purple.005
+    100178: Platform Purple.006
+    100180: Platform Red
+    100182: Platform Red.001
+    100184: Platform Red.002
+    100186: Platform Red.003
+    100188: Platform Red.004
+    100190: Platform Red.005
+    100192: Platform Red.006
+    400000: //RootNode
+    400002: Building 1 Blue.001
+    400004: Building 1 Green.002
+    400006: Building 1 Purple.003
+    400008: Building 1 Red
+    400010: Building 2 Blue.010
+    400012: Building 2 Green.013
+    400014: Building 2 Purple.022
+    400016: Building 2 Red.001
+    400018: Building 3 Blue.002
+    400020: Building 3 Blue.003
+    400022: Building 3 Green.004
+    400024: Building 3 Green.005
+    400026: Building 3 Purple.006
+    400028: Building 3 Purple.007
+    400030: Building 3 Red
+    400032: Building 3 Red.001
+    400034: Building 4 Blue.020
+    400036: Building 4 Green.023
+    400038: Building 4 Purple.042
+    400040: Building 4 Red.001
+    400042: Building 5 Blue.012
+    400044: Building 5 Blue.013
+    400046: Building 5 Blue.014
+    400048: Building 5 Blue.015
+    400050: Building 5 Blue.016
+    400052: Building 5 Blue.017
+    400054: Building 5 Blue.018
+    400056: Building 5 Blue.019
+    400058: Building 5 Blue.021
+    400060: Building 5 Blue.023
+    400062: Building 5 Green.024
+    400064: Building 5 Green.026
+    400066: Building 5 Green.028
+    400068: Building 5 Green.029
+    400070: Building 5 Green.030
+    400072: Building 5 Green.031
+    400074: Building 5 Green.032
+    400076: Building 5 Green.033
+    400078: Building 5 Green.034
+    400080: Building 5 Green.035
+    400082: Building 5 Purple.036
+    400084: Building 5 Purple.037
+    400086: Building 5 Purple.038
+    400088: Building 5 Purple.039
+    400090: Building 5 Purple.040
+    400092: Building 5 Purple.041
+    400094: Building 5 Purple.042
+    400096: Building 5 Purple.043
+    400098: Building 5 Purple.045
+    400100: Building 5 Purple.047
+    400102: Building 5 Red
+    400104: Building 5 Red.002
+    400106: Building 5 Red.004
+    400108: Building 5 Red.005
+    400110: Building 5 Red.006
+    400112: Building 5 Red.007
+    400114: Building 5 Red.008
+    400116: Building 5 Red.009
+    400118: Building 5 Red.010
+    400120: Building 5 Red.011
+    400122: Light House Blue.002
+    400124: Light House Blue.003
+    400126: Light House Green.004
+    400128: Light House Green.005
+    400130: Light House Purple.006
+    400132: Light House Purple.007
+    400134: Light House Red
+    400136: Light House Red.001
+    400138: Platform Blue
+    400140: Platform Blue.001
+    400142: Platform Blue.002
+    400144: Platform Blue.003
+    400146: Platform Blue.004
+    400148: Platform Blue.005
+    400150: Platform Blue.006
+    400152: Platform Green
+    400154: Platform Green.001
+    400156: Platform Green.002
+    400158: Platform Green.003
+    400160: Platform Green.004
+    400162: Platform Green.005
+    400164: Platform Green.006
+    400166: Platform Purple
+    400168: Platform Purple.001
+    400170: Platform Purple.002
+    400172: Platform Purple.003
+    400174: Platform Purple.004
+    400176: Platform Purple.005
+    400178: Platform Purple.006
+    400180: Platform Red
+    400182: Platform Red.001
+    400184: Platform Red.002
+    400186: Platform Red.003
+    400188: Platform Red.004
+    400190: Platform Red.005
+    400192: Platform Red.006
+    2100000: Color
+    2100002: Color.025
+    2100004: Color.026
+    2100006: Color.027
+    2100008: Color.028
+    2100010: Color.030
+    2100012: Color.029
+    2100014: Color.003
+    2100016: Color.002
+    2100018: Color.001
+    2100020: Color.004
+    2100022: Color.005
+    2100024: Color.006
+    2300000: Building 1 Blue.001
+    2300002: Building 1 Green.002
+    2300004: Building 1 Purple.003
+    2300006: Building 1 Red
+    2300008: Building 2 Blue.010
+    2300010: Building 2 Green.013
+    2300012: Building 2 Purple.022
+    2300014: Building 2 Red.001
+    2300016: Building 3 Blue.002
+    2300018: Building 3 Blue.003
+    2300020: Building 3 Green.004
+    2300022: Building 3 Green.005
+    2300024: Building 3 Purple.006
+    2300026: Building 3 Purple.007
+    2300028: Building 3 Red
+    2300030: Building 3 Red.001
+    2300032: Building 4 Blue.020
+    2300034: Building 4 Green.023
+    2300036: Building 4 Purple.042
+    2300038: Building 4 Red.001
+    2300040: Building 5 Blue.012
+    2300042: Building 5 Blue.013
+    2300044: Building 5 Blue.014
+    2300046: Building 5 Blue.015
+    2300048: Building 5 Blue.016
+    2300050: Building 5 Blue.017
+    2300052: Building 5 Blue.018
+    2300054: Building 5 Blue.019
+    2300056: Building 5 Blue.021
+    2300058: Building 5 Blue.023
+    2300060: Building 5 Green.024
+    2300062: Building 5 Green.026
+    2300064: Building 5 Green.028
+    2300066: Building 5 Green.029
+    2300068: Building 5 Green.030
+    2300070: Building 5 Green.031
+    2300072: Building 5 Green.032
+    2300074: Building 5 Green.033
+    2300076: Building 5 Green.034
+    2300078: Building 5 Green.035
+    2300080: Building 5 Purple.036
+    2300082: Building 5 Purple.037
+    2300084: Building 5 Purple.038
+    2300086: Building 5 Purple.039
+    2300088: Building 5 Purple.040
+    2300090: Building 5 Purple.041
+    2300092: Building 5 Purple.042
+    2300094: Building 5 Purple.043
+    2300096: Building 5 Purple.045
+    2300098: Building 5 Purple.047
+    2300100: Building 5 Red
+    2300102: Building 5 Red.002
+    2300104: Building 5 Red.004
+    2300106: Building 5 Red.005
+    2300108: Building 5 Red.006
+    2300110: Building 5 Red.007
+    2300112: Building 5 Red.008
+    2300114: Building 5 Red.009
+    2300116: Building 5 Red.010
+    2300118: Building 5 Red.011
+    2300120: Light House Blue.002
+    2300122: Light House Blue.003
+    2300124: Light House Green.004
+    2300126: Light House Green.005
+    2300128: Light House Purple.006
+    2300130: Light House Purple.007
+    2300132: Light House Red
+    2300134: Light House Red.001
+    2300136: Platform Blue
+    2300138: Platform Blue.001
+    2300140: Platform Blue.002
+    2300142: Platform Blue.003
+    2300144: Platform Blue.004
+    2300146: Platform Blue.005
+    2300148: Platform Blue.006
+    2300150: Platform Green
+    2300152: Platform Green.001
+    2300154: Platform Green.002
+    2300156: Platform Green.003
+    2300158: Platform Green.004
+    2300160: Platform Green.005
+    2300162: Platform Green.006
+    2300164: Platform Purple
+    2300166: Platform Purple.001
+    2300168: Platform Purple.002
+    2300170: Platform Purple.003
+    2300172: Platform Purple.004
+    2300174: Platform Purple.005
+    2300176: Platform Purple.006
+    2300178: Platform Red
+    2300180: Platform Red.001
+    2300182: Platform Red.002
+    2300184: Platform Red.003
+    2300186: Platform Red.004
+    2300188: Platform Red.005
+    2300190: Platform Red.006
+    3300000: Building 1 Blue.001
+    3300002: Building 1 Green.002
+    3300004: Building 1 Purple.003
+    3300006: Building 1 Red
+    3300008: Building 2 Blue.010
+    3300010: Building 2 Green.013
+    3300012: Building 2 Purple.022
+    3300014: Building 2 Red.001
+    3300016: Building 3 Blue.002
+    3300018: Building 3 Blue.003
+    3300020: Building 3 Green.004
+    3300022: Building 3 Green.005
+    3300024: Building 3 Purple.006
+    3300026: Building 3 Purple.007
+    3300028: Building 3 Red
+    3300030: Building 3 Red.001
+    3300032: Building 4 Blue.020
+    3300034: Building 4 Green.023
+    3300036: Building 4 Purple.042
+    3300038: Building 4 Red.001
+    3300040: Building 5 Blue.012
+    3300042: Building 5 Blue.013
+    3300044: Building 5 Blue.014
+    3300046: Building 5 Blue.015
+    3300048: Building 5 Blue.016
+    3300050: Building 5 Blue.017
+    3300052: Building 5 Blue.018
+    3300054: Building 5 Blue.019
+    3300056: Building 5 Blue.021
+    3300058: Building 5 Blue.023
+    3300060: Building 5 Green.024
+    3300062: Building 5 Green.026
+    3300064: Building 5 Green.028
+    3300066: Building 5 Green.029
+    3300068: Building 5 Green.030
+    3300070: Building 5 Green.031
+    3300072: Building 5 Green.032
+    3300074: Building 5 Green.033
+    3300076: Building 5 Green.034
+    3300078: Building 5 Green.035
+    3300080: Building 5 Purple.036
+    3300082: Building 5 Purple.037
+    3300084: Building 5 Purple.038
+    3300086: Building 5 Purple.039
+    3300088: Building 5 Purple.040
+    3300090: Building 5 Purple.041
+    3300092: Building 5 Purple.042
+    3300094: Building 5 Purple.043
+    3300096: Building 5 Purple.045
+    3300098: Building 5 Purple.047
+    3300100: Building 5 Red
+    3300102: Building 5 Red.002
+    3300104: Building 5 Red.004
+    3300106: Building 5 Red.005
+    3300108: Building 5 Red.006
+    3300110: Building 5 Red.007
+    3300112: Building 5 Red.008
+    3300114: Building 5 Red.009
+    3300116: Building 5 Red.010
+    3300118: Building 5 Red.011
+    3300120: Light House Blue.002
+    3300122: Light House Blue.003
+    3300124: Light House Green.004
+    3300126: Light House Green.005
+    3300128: Light House Purple.006
+    3300130: Light House Purple.007
+    3300132: Light House Red
+    3300134: Light House Red.001
+    3300136: Platform Blue
+    3300138: Platform Blue.001
+    3300140: Platform Blue.002
+    3300142: Platform Blue.003
+    3300144: Platform Blue.004
+    3300146: Platform Blue.005
+    3300148: Platform Blue.006
+    3300150: Platform Green
+    3300152: Platform Green.001
+    3300154: Platform Green.002
+    3300156: Platform Green.003
+    3300158: Platform Green.004
+    3300160: Platform Green.005
+    3300162: Platform Green.006
+    3300164: Platform Purple
+    3300166: Platform Purple.001
+    3300168: Platform Purple.002
+    3300170: Platform Purple.003
+    3300172: Platform Purple.004
+    3300174: Platform Purple.005
+    3300176: Platform Purple.006
+    3300178: Platform Red
+    3300180: Platform Red.001
+    3300182: Platform Red.002
+    3300184: Platform Red.003
+    3300186: Platform Red.004
+    3300188: Platform Red.005
+    3300190: Platform Red.006
+    4300000: Platform Red
+    4300002: Platform Red.001
+    4300004: Platform Red.002
+    4300006: Platform Red.003
+    4300008: Platform Red.004
+    4300010: Platform Red.005
+    4300012: Platform Red.006
+    4300014: Platform Blue
+    4300016: Platform Green
+    4300018: Platform Purple
+    4300020: Platform Blue.001
+    4300022: Platform Blue.002
+    4300024: Platform Blue.003
+    4300026: Platform Blue.004
+    4300028: Platform Blue.005
+    4300030: Platform Blue.006
+    4300032: Platform Purple.001
+    4300034: Platform Purple.002
+    4300036: Platform Purple.003
+    4300038: Platform Purple.004
+    4300040: Platform Purple.005
+    4300042: Platform Purple.006
+    4300044: Platform Green.001
+    4300046: Platform Green.002
+    4300048: Platform Green.003
+    4300050: Platform Green.004
+    4300052: Platform Green.005
+    4300054: Platform Green.006
+    4300056: Building 2 Red.001
+    4300058: Building 1 Red
+    4300060: Light House Red
+    4300062: Light House Red.001
+    4300064: Building 3 Red.001
+    4300066: Building 3 Red
+    4300068: Building 4 Red.001
+    4300070: Building 5 Red.002
+    4300072: Building 5 Red.008
+    4300074: Building 5 Red.004
+    4300076: Building 5 Red.005
+    4300078: Building 5 Red.006
+    4300080: Building 5 Red.007
+    4300082: Building 5 Red.011
+    4300084: Building 5 Red.009
+    4300086: Building 5 Red.010
+    4300088: Building 5 Red
+    4300090: Building 5 Purple.047
+    4300092: Building 5 Purple.045
+    4300094: Building 5 Purple.043
+    4300096: Building 5 Purple.042
+    4300098: Building 5 Purple.041
+    4300100: Building 5 Purple.040
+    4300102: Building 5 Purple.039
+    4300104: Building 5 Purple.038
+    4300106: Building 5 Purple.037
+    4300108: Building 5 Purple.036
+    4300110: Building 5 Green.035
+    4300112: Building 5 Green.034
+    4300114: Building 5 Green.033
+    4300116: Building 5 Green.032
+    4300118: Building 5 Green.031
+    4300120: Building 5 Green.030
+    4300122: Building 5 Green.029
+    4300124: Building 5 Green.028
+    4300126: Building 5 Green.026
+    4300128: Building 5 Green.024
+    4300130: Building 5 Blue.023
+    4300132: Building 5 Blue.021
+    4300134: Building 5 Blue.019
+    4300136: Building 5 Blue.018
+    4300138: Building 5 Blue.017
+    4300140: Building 5 Blue.016
+    4300142: Building 5 Blue.015
+    4300144: Building 5 Blue.014
+    4300146: Building 5 Blue.013
+    4300148: Building 5 Blue.012
+    4300150: Building 2 Blue.010
+    4300152: Building 2 Green.013
+    4300154: Building 2 Purple.022
+    4300156: Building 1 Blue.001
+    4300158: Building 1 Green.002
+    4300160: Building 1 Purple.003
+    4300162: Building 4 Purple.042
+    4300164: Building 4 Green.023
+    4300166: Building 4 Blue.020
+    4300168: Light House Blue.003
+    4300170: Light House Blue.002
+    4300172: Light House Green.005
+    4300174: Light House Green.004
+    4300176: Light House Purple.007
+    4300178: Light House Purple.006
+    4300180: Building 3 Blue.003
+    4300182: Building 3 Blue.002
+    4300184: Building 3 Green.005
+    4300186: Building 3 Green.004
+    4300188: Building 3 Purple.007
+    4300190: Building 3 Purple.006
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
