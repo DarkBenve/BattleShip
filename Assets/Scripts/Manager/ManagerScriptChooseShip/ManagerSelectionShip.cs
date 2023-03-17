@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,9 +14,11 @@ namespace BattleShip
         public Func<Ship, Ship> _onSelect;
         public List<Ship> shipList;
 
+        [SerializeField] private GameObject panelSelectionShip;
         [SerializeField] private TextMeshProUGUI countSmallShipUI;
         [SerializeField] private TextMeshProUGUI countMediumShipUI;
         [SerializeField] private TextMeshProUGUI countBigShipUI;
+        [SerializeField] private GameObject buttonOpenPanel;
         [SerializeField] private GameObject buttonSelectGoBattle;
         [SerializeField] private GameObject buttonRotateShip;
 
@@ -57,6 +60,30 @@ namespace BattleShip
                 isReadyGoBattle = true;
             }
         }
+
+        #region OpenPanelSelectionAnimation
+
+        public void OpenPanelSelection()
+        {
+            buttonOpenPanel.SetActive(false);
+            Animator animator = panelSelectionShip.GetComponent<Animator>();
+            animator.SetBool("IsOpen", true);
+        }
+
+        public void ClosePanelSelection()
+        {
+            StartCoroutine(ClosePanelAnimation());
+        }
+
+        private IEnumerator ClosePanelAnimation()
+        {
+            Animator animator = panelSelectionShip.GetComponent<Animator>();
+            animator.SetBool("IsOpen", false);
+            yield return new WaitForSeconds(0.8f);
+            buttonOpenPanel.SetActive(true);
+        }
+
+        #endregion
 
         public void SelectGoBattleButton()
         {
