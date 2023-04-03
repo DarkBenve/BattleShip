@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace BattleShip
 {
@@ -21,6 +22,7 @@ namespace BattleShip
         [SerializeField] private GameObject buttonOpenPanel;
         [SerializeField] private GameObject buttonSelectGoBattle;
         [SerializeField] private GameObject buttonRotateShip;
+        [SerializeField] private Image previewShip;
 
         public const int NMaxSmallShip = 4;
         public const int NMaxMediumShip = 3;
@@ -33,6 +35,7 @@ namespace BattleShip
         public bool isRotate;
         public bool isReadyGoBattle;
         private TextMeshProUGUI _textRotate;
+        [FormerlySerializedAs("_sizeShipIndex")] [SerializeField] private int sizeShipIndex;
 
         private void Start()
         {
@@ -47,10 +50,13 @@ namespace BattleShip
             _textRotate = buttonRotateShip.GetComponentInChildren<TextMeshProUGUI>();
             _textRotate.text = "Rotate " + "Top";
             buttonRotateShip.SetActive(false);
+            sizeShipIndex = 1;
         }
 
         private void Update()
         {
+            previewShip.sprite = shipList[sizeShipIndex - 1].previewShip;
+
             countSmallShipUI.text = "Ship Small\n" + currentNSmallShip + "/" + NMaxSmallShip;
             countMediumShipUI.text = "Ship Medium\n" + currentNMediumShip + "/" + NMaxMediumShip;
             countBigShipUI.text = "Ship Big\n" + currentNBigShip + "/" + NMaxBigShip;
@@ -103,7 +109,23 @@ namespace BattleShip
             }
         }
 
-        public void SelectShip(int sizeShipIndex)
+        public void NextShip()
+        {
+            sizeShipIndex++;
+            if (sizeShipIndex > shipList.Count) {
+                sizeShipIndex = 1;
+            }
+        }
+
+        public void PrevShip()
+        {
+            sizeShipIndex--;
+            if (sizeShipIndex <= 0) {
+                sizeShipIndex = 3;
+            }
+        }
+
+        public void SelectShip()
         {
             foreach (Ship ship in shipList) {
                 if (ship.sizeShip == sizeShipIndex) {

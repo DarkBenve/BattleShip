@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeShip: 1
+  previewShip: {fileID: 21300000, guid: 712cb8869653883428a24e7477236152, type: 3}
   shipType: 0
   isDeath: 0
 --- !u!1001 &2100875305644668320

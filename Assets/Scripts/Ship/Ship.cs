@@ -24,6 +24,7 @@ namespace BattleShip
     public class Ship : MonoBehaviour
     {
         [Range(1, 3)][SerializeField] public int sizeShip;
+        public Sprite previewShip;
         public TypeShip shipType;
         public bool isDeath;
         public ShipData _shipData;
