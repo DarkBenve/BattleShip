@@ -56,8 +56,11 @@ namespace BattleShip
         private void DeathShipEnemy()
         {
             if (_k == 0) {
-                gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-                gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+                var meshRenderer = gameObject.GetComponentsInChildren<MeshRenderer>();
+                for (int i = 0; i < meshRenderer.Length; i++) {
+                    meshRenderer[i].enabled = true;
+                    meshRenderer[i].material.color = Color.red;
+                }
                 GameManager._instance.nShipDeathEnemy++;
                 // Destroy(gameObject, 2.5f);
                 _k = 1;
@@ -67,8 +70,11 @@ namespace BattleShip
         private void DeathShipPlayer()
         {
             if (_k == 0) {
-                gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-                gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+                var meshRenderer = gameObject.GetComponentsInChildren<MeshRenderer>();
+                for (int i = 0; i < meshRenderer.Length; i++) {
+                    meshRenderer[i].enabled = true;
+                    meshRenderer[i].material.color = Color.red;
+                }
                 GameManager._instance.nShipDeathPlayer++;
                 // Destroy(gameObject, 2.5f);
                 _k = 1;
