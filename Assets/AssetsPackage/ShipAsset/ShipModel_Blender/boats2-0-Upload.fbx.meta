@@ -1,0 +1,1505 @@
+fileFormatVersion: 2
+guid: e2791a9d020c9e740ab08fc4484fda37
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Ship 1 Blue
+    100004: Ship 1 Blue.012
+    100006: Ship 1 Blue.013
+    100008: Ship 1 Blue.015
+    100010: Ship 1 Blue.016
+    100012: Ship 1 Blue.018
+    100014: Ship 1 Green
+    100016: Ship 1 Green.013
+    100018: Ship 1 Green.014
+    100020: Ship 1 Green.016
+    100022: Ship 1 Green.017
+    100024: Ship 1 Green.019
+    100026: Ship 1 Green.022Ship 1 Purple
+    100028: Ship 1 Green.024Ship 1 Purple
+    100030: Ship 1 Green.025Ship 1 Purple
+    100032: Ship 1 Green.027Ship 1 Purple
+    100034: Ship 1 Green.028Ship 1 Purple
+    100036: Ship 1 Green.041Ship 1 Purple
+    100038: Ship 1 Red.001
+    100040: Ship 1 Red.013
+    100042: Ship 1 Red.014
+    100044: Ship 1 Red.016
+    100046: Ship 1 Red.017
+    100048: Ship 1 Red.019
+    100050: Ship 10 Blue
+    100052: Ship 10 Blue.001
+    100054: Ship 10 Blue.002
+    100056: Ship 10 Blue.003
+    100058: Ship 10 Blue.004
+    100060: Ship 10 Blue.005
+    100062: Ship 10 Blue.006
+    100064: Ship 10 Green.005
+    100066: Ship 10 Green.006
+    100068: Ship 10 Green.007
+    100070: Ship 10 Green.008
+    100072: Ship 10 Green.009
+    100074: Ship 10 Green.010
+    100076: Ship 10 Green.011
+    100078: Ship 10 Purple
+    100080: Ship 10 Purple.001
+    100082: Ship 10 Purple.002
+    100084: Ship 10 Purple.003
+    100086: Ship 10 Purple.004
+    100088: Ship 10 Purple.005
+    100090: Ship 10 Purple.006
+    100092: Ship 10 Red
+    100094: Ship 10 Red.001
+    100096: Ship 10 Red.002
+    100098: Ship 10 Red.003
+    100100: Ship 10 Red.004
+    100102: Ship 10 Red.005
+    100104: Ship 10 Red.006
+    100106: Ship 2 BlueCube.175Ship 2 Blue
+    100108: Ship 2 BlueCube.177Ship 2 Blue
+    100110: Ship 2 BlueCube.178Ship 2 Blue
+    100112: Ship 2 BlueCube.180Ship 2 Blue
+    100114: Ship 2 BlueCube.181Ship 2 Blue
+    100116: Ship 2 BlueCylinder.001Ship 2 Blue
+    100118: Ship 2 BlueCylinder.002Ship 2 Blue
+    100120: Ship 2 BlueCylinder.003Ship 2 Blue
+    100122: Ship 2 BlueCylinder.136Ship 2 Blue
+    100124: Ship 2 BlueCylinder.137Ship 2 Blue
+    100126: Ship 2 BlueCylinder.138Ship 2 Blue
+    100128: Ship 2 BlueCylinder.139Ship 2 Blue
+    100130: Ship 2 BlueCylinder.140Ship 2 Blue
+    100132: Ship 2 BlueCylinder.141Ship 2 Blue
+    100134: Ship 2 BlueCylinder.142Ship 2 Blue
+    100136: Ship 2 BlueCylinder.143Ship 2 Blue
+    100138: Ship 2 BlueCylinder.144Ship 2 Blue
+    100140: Ship 2 Green.016
+    100142: Ship 2 Green.018
+    100144: Ship 2 Green.019
+    100146: Ship 2 Green.021
+    100148: Ship 2 Green.022
+    100150: Ship 2 Green.026
+    100152: Ship 2 Green.027
+    100154: Ship 2 Green.028
+    100156: Ship 2 Green.029
+    100158: Ship 2 Green.030
+    100160: Ship 2 Green.031
+    100162: Ship 2 Green.032
+    100164: Ship 2 Green.033
+    100166: Ship 2 Green.034
+    100168: Ship 2 Green.035
+    100170: Ship 2 Green.036
+    100172: Ship 2 Green.037
+    100174: Ship 2 Purple.004
+    100176: Ship 2 Purple.005
+    100178: Ship 2 Purple.007
+    100180: Ship 2 Purple.008
+    100182: Ship 2 Purple.010
+    100184: Ship 2 Purple.026
+    100186: Ship 2 Purple.027
+    100188: Ship 2 Purple.028
+    100190: Ship 2 Purple.029
+    100192: Ship 2 Purple.030
+    100194: Ship 2 Purple.031
+    100196: Ship 2 Purple.032
+    100198: Ship 2 Purple.033
+    100200: Ship 2 Purple.034
+    100202: Ship 2 Purple.035
+    100204: Ship 2 Purple.036
+    100206: Ship 2 Purple.037
+    100208: Ship 2 Red.001
+    100210: Ship 2 Red.003
+    100212: Ship 2 Red.004
+    100214: Ship 2 Red.005
+    100216: Ship 2 Red.006
+    100218: Ship 2 Red.007
+    100220: Ship 2 Red.008
+    100222: Ship 2 Red.009
+    100224: Ship 2 Red.010
+    100226: Ship 2 Red.011
+    100228: Ship 2 Red.012
+    100230: Ship 2 Red.013
+    100232: Ship 2 Red.016
+    100234: Ship 2 Red.017
+    100236: Ship 2 Red.018
+    100238: Ship 2 Red.019
+    100240: Ship 2 Red.029
+    100242: Ship 3 Blue.001
+    100244: Ship 3 Blue.004
+    100246: Ship 3 Blue.010
+    100248: Ship 3 Blue.011
+    100250: Ship 3 Blue.012
+    100252: Ship 3 Blue.013
+    100254: Ship 3 Blue.014
+    100256: Ship 3 Blue.015
+    100258: Ship 3 Blue.017
+    100260: Ship 3 Blue.019
+    100262: Ship 3 Blue.020
+    100264: Ship 3 Blue.021
+    100266: Ship 3 Blue.022
+    100268: Ship 3 Blue.023
+    100270: Ship 3 Green
+    100272: Ship 3 Green.001
+    100274: Ship 3 Green.002
+    100276: Ship 3 Green.003
+    100278: Ship 3 Green.004
+    100280: Ship 3 Green.006
+    100282: Ship 3 Green.008
+    100284: Ship 3 Green.009
+    100286: Ship 3 Green.010
+    100288: Ship 3 Green.011
+    100290: Ship 3 Green.013
+    100292: Ship 3 Green.019
+    100294: Ship 3 Green.023
+    100296: Ship 3 Purple.001
+    100298: Ship 3 Purple.004
+    100300: Ship 3 Purple.010
+    100302: Ship 3 Purple.012
+    100304: Ship 3 Purple.013
+    100306: Ship 3 Purple.014
+    100308: Ship 3 Purple.015
+    100310: Ship 3 Purple.017
+    100312: Ship 3 Purple.019
+    100314: Ship 3 Purple.020
+    100316: Ship 3 Purple.021
+    100318: Ship 3 Purple.022
+    100320: Ship 3 Purple.023
+    100322: Ship 3 Red
+    100324: Ship 3 Red.004
+    100326: Ship 3 Red.010
+    100328: Ship 3 Red.012
+    100330: Ship 3 Red.013
+    100332: Ship 3 Red.014
+    100334: Ship 3 Red.015
+    100336: Ship 3 Red.017
+    100338: Ship 3 Red.019
+    100340: Ship 3 Red.020
+    100342: Ship 3 Red.021
+    100344: Ship 3 Red.022
+    100346: Ship 3 Red.023
+    100348: Ship 4 Blue.001
+    100350: Ship 4 Blue.003
+    100352: Ship 4 Blue.005
+    100354: Ship 4 Blue.009
+    100356: Ship 4 Blue.010
+    100358: Ship 4 Blue.016
+    100360: Ship 4 Blue.028
+    100362: Ship 4 Green.001
+    100364: Ship 4 Green.003
+    100366: Ship 4 Green.005
+    100368: Ship 4 Green.009
+    100370: Ship 4 Green.010
+    100372: Ship 4 Green.016
+    100374: Ship 4 Green.028
+    100376: Ship 4 Purple.011
+    100378: Ship 4 Purple.017
+    100380: Ship 4 Purple.018
+    100382: Ship 4 Purple.022
+    100384: Ship 4 Purple.024
+    100386: Ship 4 Purple.027
+    100388: Ship 4 Purple.028
+    100390: Ship 4 Red
+    100392: Ship 4 Red.003
+    100394: Ship 4 Red.005
+    100396: Ship 4 Red.009
+    100398: Ship 4 Red.010
+    100400: Ship 4 Red.016
+    100402: Ship 4 Red.028
+    100404: Ship 5 Blue
+    100406: Ship 5 Blue.001
+    100408: Ship 5 Blue.002
+    100410: Ship 5 Blue.007
+    100412: Ship 5 Blue.008
+    100414: Ship 5 Blue.009
+    100416: Ship 5 Blue.010
+    100418: Ship 5 Green
+    100420: Ship 5 Green.001
+    100422: Ship 5 Green.002
+    100424: Ship 5 Green.003
+    100426: Ship 5 Green.008
+    100428: Ship 5 Green.009
+    100430: Ship 5 Green.010
+    100432: Ship 5 Purple
+    100434: Ship 5 Purple.001
+    100436: Ship 5 Purple.002
+    100438: Ship 5 Purple.007
+    100440: Ship 5 Purple.008
+    100442: Ship 5 Purple.009
+    100444: Ship 5 Purple.010
+    100446: Ship 5 Red
+    100448: Ship 5 Red.001
+    100450: Ship 5 Red.002
+    100452: Ship 5 Red.007
+    100454: Ship 5 Red.008
+    100456: Ship 5 Red.009
+    100458: Ship 5 Red.010
+    100460: Ship 6 Blue.002
+    100462: Ship 6 Blue.004
+    100464: Ship 6 Blue.005
+    100466: Ship 6 Blue.006
+    100468: Ship 6 Blue.008
+    100470: Ship 6 Blue.010
+    100472: Ship 6 Blue.017
+    100474: Ship 6 Green.001
+    100476: Ship 6 Green.007
+    100478: Ship 6 Green.009
+    100480: Ship 6 Green.011
+    100482: Ship 6 Green.012
+    100484: Ship 6 Green.013
+    100486: Ship 6 Green.015
+    100488: Ship 6 Purple.002
+    100490: Ship 6 Purple.004
+    100492: Ship 6 Purple.005
+    100494: Ship 6 Purple.006
+    100496: Ship 6 Purple.008
+    100498: Ship 6 Purple.010
+    100500: Ship 6 Purple.017
+    100502: Ship 6 Red.002
+    100504: Ship 6 Red.004
+    100506: Ship 6 Red.005
+    100508: Ship 6 Red.006
+    100510: Ship 6 Red.008
+    100512: Ship 6 Red.010
+    100514: Ship 6 Red.017
+    100516: Ship 7 Blue.002
+    100518: Ship 7 Blue.003
+    100520: Ship 7 Blue.020
+    100522: Ship 7 Blue.021
+    100524: Ship 7 Blue.023
+    100526: Ship 7 Green.015
+    100528: Ship 7 Green.016
+    100530: Ship 7 Green.018
+    100532: Ship 7 Green.020
+    100534: Ship 7 Green.021
+    100536: Ship 7 Purple.002
+    100538: Ship 7 Purple.003
+    100540: Ship 7 Purple.020
+    100542: Ship 7 Purple.021
+    100544: Ship 7 Purple.023
+    100546: Ship 7 Red.002
+    100548: Ship 7 Red.003
+    100550: Ship 7 Red.005
+    100552: Ship 7 Red.007
+    100554: Ship 7 Red.018
+    400000: //RootNode
+    400002: Ship 1 Blue
+    400004: Ship 1 Blue.012
+    400006: Ship 1 Blue.013
+    400008: Ship 1 Blue.015
+    400010: Ship 1 Blue.016
+    400012: Ship 1 Blue.018
+    400014: Ship 1 Green
+    400016: Ship 1 Green.013
+    400018: Ship 1 Green.014
+    400020: Ship 1 Green.016
+    400022: Ship 1 Green.017
+    400024: Ship 1 Green.019
+    400026: Ship 1 Green.022Ship 1 Purple
+    400028: Ship 1 Green.024Ship 1 Purple
+    400030: Ship 1 Green.025Ship 1 Purple
+    400032: Ship 1 Green.027Ship 1 Purple
+    400034: Ship 1 Green.028Ship 1 Purple
+    400036: Ship 1 Green.041Ship 1 Purple
+    400038: Ship 1 Red.001
+    400040: Ship 1 Red.013
+    400042: Ship 1 Red.014
+    400044: Ship 1 Red.016
+    400046: Ship 1 Red.017
+    400048: Ship 1 Red.019
+    400050: Ship 10 Blue
+    400052: Ship 10 Blue.001
+    400054: Ship 10 Blue.002
+    400056: Ship 10 Blue.003
+    400058: Ship 10 Blue.004
+    400060: Ship 10 Blue.005
+    400062: Ship 10 Blue.006
+    400064: Ship 10 Green.005
+    400066: Ship 10 Green.006
+    400068: Ship 10 Green.007
+    400070: Ship 10 Green.008
+    400072: Ship 10 Green.009
+    400074: Ship 10 Green.010
+    400076: Ship 10 Green.011
+    400078: Ship 10 Purple
+    400080: Ship 10 Purple.001
+    400082: Ship 10 Purple.002
+    400084: Ship 10 Purple.003
+    400086: Ship 10 Purple.004
+    400088: Ship 10 Purple.005
+    400090: Ship 10 Purple.006
+    400092: Ship 10 Red
+    400094: Ship 10 Red.001
+    400096: Ship 10 Red.002
+    400098: Ship 10 Red.003
+    400100: Ship 10 Red.004
+    400102: Ship 10 Red.005
+    400104: Ship 10 Red.006
+    400106: Ship 2 BlueCube.175Ship 2 Blue
+    400108: Ship 2 BlueCube.177Ship 2 Blue
+    400110: Ship 2 BlueCube.178Ship 2 Blue
+    400112: Ship 2 BlueCube.180Ship 2 Blue
+    400114: Ship 2 BlueCube.181Ship 2 Blue
+    400116: Ship 2 BlueCylinder.001Ship 2 Blue
+    400118: Ship 2 BlueCylinder.002Ship 2 Blue
+    400120: Ship 2 BlueCylinder.003Ship 2 Blue
+    400122: Ship 2 BlueCylinder.136Ship 2 Blue
+    400124: Ship 2 BlueCylinder.137Ship 2 Blue
+    400126: Ship 2 BlueCylinder.138Ship 2 Blue
+    400128: Ship 2 BlueCylinder.139Ship 2 Blue
+    400130: Ship 2 BlueCylinder.140Ship 2 Blue
+    400132: Ship 2 BlueCylinder.141Ship 2 Blue
+    400134: Ship 2 BlueCylinder.142Ship 2 Blue
+    400136: Ship 2 BlueCylinder.143Ship 2 Blue
+    400138: Ship 2 BlueCylinder.144Ship 2 Blue
+    400140: Ship 2 Green.016
+    400142: Ship 2 Green.018
+    400144: Ship 2 Green.019
+    400146: Ship 2 Green.021
+    400148: Ship 2 Green.022
+    400150: Ship 2 Green.026
+    400152: Ship 2 Green.027
+    400154: Ship 2 Green.028
+    400156: Ship 2 Green.029
+    400158: Ship 2 Green.030
+    400160: Ship 2 Green.031
+    400162: Ship 2 Green.032
+    400164: Ship 2 Green.033
+    400166: Ship 2 Green.034
+    400168: Ship 2 Green.035
+    400170: Ship 2 Green.036
+    400172: Ship 2 Green.037
+    400174: Ship 2 Purple.004
+    400176: Ship 2 Purple.005
+    400178: Ship 2 Purple.007
+    400180: Ship 2 Purple.008
+    400182: Ship 2 Purple.010
+    400184: Ship 2 Purple.026
+    400186: Ship 2 Purple.027
+    400188: Ship 2 Purple.028
+    400190: Ship 2 Purple.029
+    400192: Ship 2 Purple.030
+    400194: Ship 2 Purple.031
+    400196: Ship 2 Purple.032
+    400198: Ship 2 Purple.033
+    400200: Ship 2 Purple.034
+    400202: Ship 2 Purple.035
+    400204: Ship 2 Purple.036
+    400206: Ship 2 Purple.037
+    400208: Ship 2 Red.001
+    400210: Ship 2 Red.003
+    400212: Ship 2 Red.004
+    400214: Ship 2 Red.005
+    400216: Ship 2 Red.006
+    400218: Ship 2 Red.007
+    400220: Ship 2 Red.008
+    400222: Ship 2 Red.009
+    400224: Ship 2 Red.010
+    400226: Ship 2 Red.011
+    400228: Ship 2 Red.012
+    400230: Ship 2 Red.013
+    400232: Ship 2 Red.016
+    400234: Ship 2 Red.017
+    400236: Ship 2 Red.018
+    400238: Ship 2 Red.019
+    400240: Ship 2 Red.029
+    400242: Ship 3 Blue.001
+    400244: Ship 3 Blue.004
+    400246: Ship 3 Blue.010
+    400248: Ship 3 Blue.011
+    400250: Ship 3 Blue.012
+    400252: Ship 3 Blue.013
+    400254: Ship 3 Blue.014
+    400256: Ship 3 Blue.015
+    400258: Ship 3 Blue.017
+    400260: Ship 3 Blue.019
+    400262: Ship 3 Blue.020
+    400264: Ship 3 Blue.021
+    400266: Ship 3 Blue.022
+    400268: Ship 3 Blue.023
+    400270: Ship 3 Green
+    400272: Ship 3 Green.001
+    400274: Ship 3 Green.002
+    400276: Ship 3 Green.003
+    400278: Ship 3 Green.004
+    400280: Ship 3 Green.006
+    400282: Ship 3 Green.008
+    400284: Ship 3 Green.009
+    400286: Ship 3 Green.010
+    400288: Ship 3 Green.011
+    400290: Ship 3 Green.013
+    400292: Ship 3 Green.019
+    400294: Ship 3 Green.023
+    400296: Ship 3 Purple.001
+    400298: Ship 3 Purple.004
+    400300: Ship 3 Purple.010
+    400302: Ship 3 Purple.012
+    400304: Ship 3 Purple.013
+    400306: Ship 3 Purple.014
+    400308: Ship 3 Purple.015
+    400310: Ship 3 Purple.017
+    400312: Ship 3 Purple.019
+    400314: Ship 3 Purple.020
+    400316: Ship 3 Purple.021
+    400318: Ship 3 Purple.022
+    400320: Ship 3 Purple.023
+    400322: Ship 3 Red
+    400324: Ship 3 Red.004
+    400326: Ship 3 Red.010
+    400328: Ship 3 Red.012
+    400330: Ship 3 Red.013
+    400332: Ship 3 Red.014
+    400334: Ship 3 Red.015
+    400336: Ship 3 Red.017
+    400338: Ship 3 Red.019
+    400340: Ship 3 Red.020
+    400342: Ship 3 Red.021
+    400344: Ship 3 Red.022
+    400346: Ship 3 Red.023
+    400348: Ship 4 Blue.001
+    400350: Ship 4 Blue.003
+    400352: Ship 4 Blue.005
+    400354: Ship 4 Blue.009
+    400356: Ship 4 Blue.010
+    400358: Ship 4 Blue.016
+    400360: Ship 4 Blue.028
+    400362: Ship 4 Green.001
+    400364: Ship 4 Green.003
+    400366: Ship 4 Green.005
+    400368: Ship 4 Green.009
+    400370: Ship 4 Green.010
+    400372: Ship 4 Green.016
+    400374: Ship 4 Green.028
+    400376: Ship 4 Purple.011
+    400378: Ship 4 Purple.017
+    400380: Ship 4 Purple.018
+    400382: Ship 4 Purple.022
+    400384: Ship 4 Purple.024
+    400386: Ship 4 Purple.027
+    400388: Ship 4 Purple.028
+    400390: Ship 4 Red
+    400392: Ship 4 Red.003
+    400394: Ship 4 Red.005
+    400396: Ship 4 Red.009
+    400398: Ship 4 Red.010
+    400400: Ship 4 Red.016
+    400402: Ship 4 Red.028
+    400404: Ship 5 Blue
+    400406: Ship 5 Blue.001
+    400408: Ship 5 Blue.002
+    400410: Ship 5 Blue.007
+    400412: Ship 5 Blue.008
+    400414: Ship 5 Blue.009
+    400416: Ship 5 Blue.010
+    400418: Ship 5 Green
+    400420: Ship 5 Green.001
+    400422: Ship 5 Green.002
+    400424: Ship 5 Green.003
+    400426: Ship 5 Green.008
+    400428: Ship 5 Green.009
+    400430: Ship 5 Green.010
+    400432: Ship 5 Purple
+    400434: Ship 5 Purple.001
+    400436: Ship 5 Purple.002
+    400438: Ship 5 Purple.007
+    400440: Ship 5 Purple.008
+    400442: Ship 5 Purple.009
+    400444: Ship 5 Purple.010
+    400446: Ship 5 Red
+    400448: Ship 5 Red.001
+    400450: Ship 5 Red.002
+    400452: Ship 5 Red.007
+    400454: Ship 5 Red.008
+    400456: Ship 5 Red.009
+    400458: Ship 5 Red.010
+    400460: Ship 6 Blue.002
+    400462: Ship 6 Blue.004
+    400464: Ship 6 Blue.005
+    400466: Ship 6 Blue.006
+    400468: Ship 6 Blue.008
+    400470: Ship 6 Blue.010
+    400472: Ship 6 Blue.017
+    400474: Ship 6 Green.001
+    400476: Ship 6 Green.007
+    400478: Ship 6 Green.009
+    400480: Ship 6 Green.011
+    400482: Ship 6 Green.012
+    400484: Ship 6 Green.013
+    400486: Ship 6 Green.015
+    400488: Ship 6 Purple.002
+    400490: Ship 6 Purple.004
+    400492: Ship 6 Purple.005
+    400494: Ship 6 Purple.006
+    400496: Ship 6 Purple.008
+    400498: Ship 6 Purple.010
+    400500: Ship 6 Purple.017
+    400502: Ship 6 Red.002
+    400504: Ship 6 Red.004
+    400506: Ship 6 Red.005
+    400508: Ship 6 Red.006
+    400510: Ship 6 Red.008
+    400512: Ship 6 Red.010
+    400514: Ship 6 Red.017
+    400516: Ship 7 Blue.002
+    400518: Ship 7 Blue.003
+    400520: Ship 7 Blue.020
+    400522: Ship 7 Blue.021
+    400524: Ship 7 Blue.023
+    400526: Ship 7 Green.015
+    400528: Ship 7 Green.016
+    400530: Ship 7 Green.018
+    400532: Ship 7 Green.020
+    400534: Ship 7 Green.021
+    400536: Ship 7 Purple.002
+    400538: Ship 7 Purple.003
+    400540: Ship 7 Purple.020
+    400542: Ship 7 Purple.021
+    400544: Ship 7 Purple.023
+    400546: Ship 7 Red.002
+    400548: Ship 7 Red.003
+    400550: Ship 7 Red.005
+    400552: Ship 7 Red.007
+    400554: Ship 7 Red.018
+    2100000: Color
+    2100002: No Name
+    2100004: Color.001
+    2100006: Color.002
+    2100008: Color.003
+    2100010: Color.004
+    2100012: Color.005
+    2100014: Color.006
+    2100016: Color.007
+    2100018: Color.008
+    2100020: Color.009
+    2100022: Color.010
+    2100024: Color.011
+    2100026: Color.012
+    2100028: Color.015
+    2100030: Color.014
+    2100032: Color.013
+    2100034: Color.018
+    2100036: Color.017
+    2100038: Color.016
+    2100040: Color.019
+    2100042: Color.020
+    2100044: Color.021
+    2100046: Color.022
+    2100048: Color.023
+    2100050: Color.024
+    2300000: Ship 1 Blue
+    2300002: Ship 1 Blue.012
+    2300004: Ship 1 Blue.013
+    2300006: Ship 1 Blue.015
+    2300008: Ship 1 Blue.016
+    2300010: Ship 1 Blue.018
+    2300012: Ship 1 Green
+    2300014: Ship 1 Green.013
+    2300016: Ship 1 Green.014
+    2300018: Ship 1 Green.016
+    2300020: Ship 1 Green.017
+    2300022: Ship 1 Green.019
+    2300024: Ship 1 Green.022Ship 1 Purple
+    2300026: Ship 1 Green.024Ship 1 Purple
+    2300028: Ship 1 Green.025Ship 1 Purple
+    2300030: Ship 1 Green.027Ship 1 Purple
+    2300032: Ship 1 Green.028Ship 1 Purple
+    2300034: Ship 1 Green.041Ship 1 Purple
+    2300036: Ship 1 Red.001
+    2300038: Ship 1 Red.013
+    2300040: Ship 1 Red.014
+    2300042: Ship 1 Red.016
+    2300044: Ship 1 Red.017
+    2300046: Ship 1 Red.019
+    2300048: Ship 10 Blue
+    2300050: Ship 10 Blue.001
+    2300052: Ship 10 Blue.002
+    2300054: Ship 10 Blue.003
+    2300056: Ship 10 Blue.004
+    2300058: Ship 10 Blue.005
+    2300060: Ship 10 Blue.006
+    2300062: Ship 10 Green.005
+    2300064: Ship 10 Green.006
+    2300066: Ship 10 Green.007
+    2300068: Ship 10 Green.008
+    2300070: Ship 10 Green.009
+    2300072: Ship 10 Green.010
+    2300074: Ship 10 Green.011
+    2300076: Ship 10 Purple
+    2300078: Ship 10 Purple.001
+    2300080: Ship 10 Purple.002
+    2300082: Ship 10 Purple.003
+    2300084: Ship 10 Purple.004
+    2300086: Ship 10 Purple.005
+    2300088: Ship 10 Purple.006
+    2300090: Ship 10 Red
+    2300092: Ship 10 Red.001
+    2300094: Ship 10 Red.002
+    2300096: Ship 10 Red.003
+    2300098: Ship 10 Red.004
+    2300100: Ship 10 Red.005
+    2300102: Ship 10 Red.006
+    2300104: Ship 2 BlueCube.175Ship 2 Blue
+    2300106: Ship 2 BlueCube.177Ship 2 Blue
+    2300108: Ship 2 BlueCube.178Ship 2 Blue
+    2300110: Ship 2 BlueCube.180Ship 2 Blue
+    2300112: Ship 2 BlueCube.181Ship 2 Blue
+    2300114: Ship 2 BlueCylinder.001Ship 2 Blue
+    2300116: Ship 2 BlueCylinder.002Ship 2 Blue
+    2300118: Ship 2 BlueCylinder.003Ship 2 Blue
+    2300120: Ship 2 BlueCylinder.136Ship 2 Blue
+    2300122: Ship 2 BlueCylinder.137Ship 2 Blue
+    2300124: Ship 2 BlueCylinder.138Ship 2 Blue
+    2300126: Ship 2 BlueCylinder.139Ship 2 Blue
+    2300128: Ship 2 BlueCylinder.140Ship 2 Blue
+    2300130: Ship 2 BlueCylinder.141Ship 2 Blue
+    2300132: Ship 2 BlueCylinder.142Ship 2 Blue
+    2300134: Ship 2 BlueCylinder.143Ship 2 Blue
+    2300136: Ship 2 BlueCylinder.144Ship 2 Blue
+    2300138: Ship 2 Green.016
+    2300140: Ship 2 Green.018
+    2300142: Ship 2 Green.019
+    2300144: Ship 2 Green.021
+    2300146: Ship 2 Green.022
+    2300148: Ship 2 Green.026
+    2300150: Ship 2 Green.027
+    2300152: Ship 2 Green.028
+    2300154: Ship 2 Green.029
+    2300156: Ship 2 Green.030
+    2300158: Ship 2 Green.031
+    2300160: Ship 2 Green.032
+    2300162: Ship 2 Green.033
+    2300164: Ship 2 Green.034
+    2300166: Ship 2 Green.035
+    2300168: Ship 2 Green.036
+    2300170: Ship 2 Green.037
+    2300172: Ship 2 Purple.004
+    2300174: Ship 2 Purple.005
+    2300176: Ship 2 Purple.007
+    2300178: Ship 2 Purple.008
+    2300180: Ship 2 Purple.010
+    2300182: Ship 2 Purple.026
+    2300184: Ship 2 Purple.027
+    2300186: Ship 2 Purple.028
+    2300188: Ship 2 Purple.029
+    2300190: Ship 2 Purple.030
+    2300192: Ship 2 Purple.031
+    2300194: Ship 2 Purple.032
+    2300196: Ship 2 Purple.033
+    2300198: Ship 2 Purple.034
+    2300200: Ship 2 Purple.035
+    2300202: Ship 2 Purple.036
+    2300204: Ship 2 Purple.037
+    2300206: Ship 2 Red.001
+    2300208: Ship 2 Red.003
+    2300210: Ship 2 Red.004
+    2300212: Ship 2 Red.005
+    2300214: Ship 2 Red.006
+    2300216: Ship 2 Red.007
+    2300218: Ship 2 Red.008
+    2300220: Ship 2 Red.009
+    2300222: Ship 2 Red.010
+    2300224: Ship 2 Red.011
+    2300226: Ship 2 Red.012
+    2300228: Ship 2 Red.013
+    2300230: Ship 2 Red.016
+    2300232: Ship 2 Red.017
+    2300234: Ship 2 Red.018
+    2300236: Ship 2 Red.019
+    2300238: Ship 2 Red.029
+    2300240: Ship 3 Blue.001
+    2300242: Ship 3 Blue.004
+    2300244: Ship 3 Blue.010
+    2300246: Ship 3 Blue.011
+    2300248: Ship 3 Blue.012
+    2300250: Ship 3 Blue.013
+    2300252: Ship 3 Blue.014
+    2300254: Ship 3 Blue.015
+    2300256: Ship 3 Blue.017
+    2300258: Ship 3 Blue.019
+    2300260: Ship 3 Blue.020
+    2300262: Ship 3 Blue.021
+    2300264: Ship 3 Blue.022
+    2300266: Ship 3 Blue.023
+    2300268: Ship 3 Green
+    2300270: Ship 3 Green.001
+    2300272: Ship 3 Green.002
+    2300274: Ship 3 Green.003
+    2300276: Ship 3 Green.004
+    2300278: Ship 3 Green.006
+    2300280: Ship 3 Green.008
+    2300282: Ship 3 Green.009
+    2300284: Ship 3 Green.010
+    2300286: Ship 3 Green.011
+    2300288: Ship 3 Green.013
+    2300290: Ship 3 Green.019
+    2300292: Ship 3 Green.023
+    2300294: Ship 3 Purple.001
+    2300296: Ship 3 Purple.004
+    2300298: Ship 3 Purple.010
+    2300300: Ship 3 Purple.012
+    2300302: Ship 3 Purple.013
+    2300304: Ship 3 Purple.014
+    2300306: Ship 3 Purple.015
+    2300308: Ship 3 Purple.017
+    2300310: Ship 3 Purple.019
+    2300312: Ship 3 Purple.020
+    2300314: Ship 3 Purple.021
+    2300316: Ship 3 Purple.022
+    2300318: Ship 3 Purple.023
+    2300320: Ship 3 Red
+    2300322: Ship 3 Red.004
+    2300324: Ship 3 Red.010
+    2300326: Ship 3 Red.012
+    2300328: Ship 3 Red.013
+    2300330: Ship 3 Red.014
+    2300332: Ship 3 Red.015
+    2300334: Ship 3 Red.017
+    2300336: Ship 3 Red.019
+    2300338: Ship 3 Red.020
+    2300340: Ship 3 Red.021
+    2300342: Ship 3 Red.022
+    2300344: Ship 3 Red.023
+    2300346: Ship 4 Blue.001
+    2300348: Ship 4 Blue.003
+    2300350: Ship 4 Blue.005
+    2300352: Ship 4 Blue.009
+    2300354: Ship 4 Blue.010
+    2300356: Ship 4 Blue.016
+    2300358: Ship 4 Blue.028
+    2300360: Ship 4 Green.001
+    2300362: Ship 4 Green.003
+    2300364: Ship 4 Green.005
+    2300366: Ship 4 Green.009
+    2300368: Ship 4 Green.010
+    2300370: Ship 4 Green.016
+    2300372: Ship 4 Green.028
+    2300374: Ship 4 Purple.011
+    2300376: Ship 4 Purple.017
+    2300378: Ship 4 Purple.018
+    2300380: Ship 4 Purple.022
+    2300382: Ship 4 Purple.024
+    2300384: Ship 4 Purple.027
+    2300386: Ship 4 Purple.028
+    2300388: Ship 4 Red
+    2300390: Ship 4 Red.003
+    2300392: Ship 4 Red.005
+    2300394: Ship 4 Red.009
+    2300396: Ship 4 Red.010
+    2300398: Ship 4 Red.016
+    2300400: Ship 4 Red.028
+    2300402: Ship 5 Blue
+    2300404: Ship 5 Blue.001
+    2300406: Ship 5 Blue.002
+    2300408: Ship 5 Blue.007
+    2300410: Ship 5 Blue.008
+    2300412: Ship 5 Blue.009
+    2300414: Ship 5 Blue.010
+    2300416: Ship 5 Green
+    2300418: Ship 5 Green.001
+    2300420: Ship 5 Green.002
+    2300422: Ship 5 Green.003
+    2300424: Ship 5 Green.008
+    2300426: Ship 5 Green.009
+    2300428: Ship 5 Green.010
+    2300430: Ship 5 Purple
+    2300432: Ship 5 Purple.001
+    2300434: Ship 5 Purple.002
+    2300436: Ship 5 Purple.007
+    2300438: Ship 5 Purple.008
+    2300440: Ship 5 Purple.009
+    2300442: Ship 5 Purple.010
+    2300444: Ship 5 Red
+    2300446: Ship 5 Red.001
+    2300448: Ship 5 Red.002
+    2300450: Ship 5 Red.007
+    2300452: Ship 5 Red.008
+    2300454: Ship 5 Red.009
+    2300456: Ship 5 Red.010
+    2300458: Ship 6 Blue.002
+    2300460: Ship 6 Blue.004
+    2300462: Ship 6 Blue.005
+    2300464: Ship 6 Blue.006
+    2300466: Ship 6 Blue.008
+    2300468: Ship 6 Blue.010
+    2300470: Ship 6 Blue.017
+    2300472: Ship 6 Green.001
+    2300474: Ship 6 Green.007
+    2300476: Ship 6 Green.009
+    2300478: Ship 6 Green.011
+    2300480: Ship 6 Green.012
+    2300482: Ship 6 Green.013
+    2300484: Ship 6 Green.015
+    2300486: Ship 6 Purple.002
+    2300488: Ship 6 Purple.004
+    2300490: Ship 6 Purple.005
+    2300492: Ship 6 Purple.006
+    2300494: Ship 6 Purple.008
+    2300496: Ship 6 Purple.010
+    2300498: Ship 6 Purple.017
+    2300500: Ship 6 Red.002
+    2300502: Ship 6 Red.004
+    2300504: Ship 6 Red.005
+    2300506: Ship 6 Red.006
+    2300508: Ship 6 Red.008
+    2300510: Ship 6 Red.010
+    2300512: Ship 6 Red.017
+    2300514: Ship 7 Blue.002
+    2300516: Ship 7 Blue.003
+    2300518: Ship 7 Blue.020
+    2300520: Ship 7 Blue.021
+    2300522: Ship 7 Blue.023
+    2300524: Ship 7 Green.015
+    2300526: Ship 7 Green.016
+    2300528: Ship 7 Green.018
+    2300530: Ship 7 Green.020
+    2300532: Ship 7 Green.021
+    2300534: Ship 7 Purple.002
+    2300536: Ship 7 Purple.003
+    2300538: Ship 7 Purple.020
+    2300540: Ship 7 Purple.021
+    2300542: Ship 7 Purple.023
+    2300544: Ship 7 Red.002
+    2300546: Ship 7 Red.003
+    2300548: Ship 7 Red.005
+    2300550: Ship 7 Red.007
+    2300552: Ship 7 Red.018
+    3300000: Ship 1 Blue
+    3300002: Ship 1 Blue.012
+    3300004: Ship 1 Blue.013
+    3300006: Ship 1 Blue.015
+    3300008: Ship 1 Blue.016
+    3300010: Ship 1 Blue.018
+    3300012: Ship 1 Green
+    3300014: Ship 1 Green.013
+    3300016: Ship 1 Green.014
+    3300018: Ship 1 Green.016
+    3300020: Ship 1 Green.017
+    3300022: Ship 1 Green.019
+    3300024: Ship 1 Green.022Ship 1 Purple
+    3300026: Ship 1 Green.024Ship 1 Purple
+    3300028: Ship 1 Green.025Ship 1 Purple
+    3300030: Ship 1 Green.027Ship 1 Purple
+    3300032: Ship 1 Green.028Ship 1 Purple
+    3300034: Ship 1 Green.041Ship 1 Purple
+    3300036: Ship 1 Red.001
+    3300038: Ship 1 Red.013
+    3300040: Ship 1 Red.014
+    3300042: Ship 1 Red.016
+    3300044: Ship 1 Red.017
+    3300046: Ship 1 Red.019
+    3300048: Ship 10 Blue
+    3300050: Ship 10 Blue.001
+    3300052: Ship 10 Blue.002
+    3300054: Ship 10 Blue.003
+    3300056: Ship 10 Blue.004
+    3300058: Ship 10 Blue.005
+    3300060: Ship 10 Blue.006
+    3300062: Ship 10 Green.005
+    3300064: Ship 10 Green.006
+    3300066: Ship 10 Green.007
+    3300068: Ship 10 Green.008
+    3300070: Ship 10 Green.009
+    3300072: Ship 10 Green.010
+    3300074: Ship 10 Green.011
+    3300076: Ship 10 Purple
+    3300078: Ship 10 Purple.001
+    3300080: Ship 10 Purple.002
+    3300082: Ship 10 Purple.003
+    3300084: Ship 10 Purple.004
+    3300086: Ship 10 Purple.005
+    3300088: Ship 10 Purple.006
+    3300090: Ship 10 Red
+    3300092: Ship 10 Red.001
+    3300094: Ship 10 Red.002
+    3300096: Ship 10 Red.003
+    3300098: Ship 10 Red.004
+    3300100: Ship 10 Red.005
+    3300102: Ship 10 Red.006
+    3300104: Ship 2 BlueCube.175Ship 2 Blue
+    3300106: Ship 2 BlueCube.177Ship 2 Blue
+    3300108: Ship 2 BlueCube.178Ship 2 Blue
+    3300110: Ship 2 BlueCube.180Ship 2 Blue
+    3300112: Ship 2 BlueCube.181Ship 2 Blue
+    3300114: Ship 2 BlueCylinder.001Ship 2 Blue
+    3300116: Ship 2 BlueCylinder.002Ship 2 Blue
+    3300118: Ship 2 BlueCylinder.003Ship 2 Blue
+    3300120: Ship 2 BlueCylinder.136Ship 2 Blue
+    3300122: Ship 2 BlueCylinder.137Ship 2 Blue
+    3300124: Ship 2 BlueCylinder.138Ship 2 Blue
+    3300126: Ship 2 BlueCylinder.139Ship 2 Blue
+    3300128: Ship 2 BlueCylinder.140Ship 2 Blue
+    3300130: Ship 2 BlueCylinder.141Ship 2 Blue
+    3300132: Ship 2 BlueCylinder.142Ship 2 Blue
+    3300134: Ship 2 BlueCylinder.143Ship 2 Blue
+    3300136: Ship 2 BlueCylinder.144Ship 2 Blue
+    3300138: Ship 2 Green.016
+    3300140: Ship 2 Green.018
+    3300142: Ship 2 Green.019
+    3300144: Ship 2 Green.021
+    3300146: Ship 2 Green.022
+    3300148: Ship 2 Green.026
+    3300150: Ship 2 Green.027
+    3300152: Ship 2 Green.028
+    3300154: Ship 2 Green.029
+    3300156: Ship 2 Green.030
+    3300158: Ship 2 Green.031
+    3300160: Ship 2 Green.032
+    3300162: Ship 2 Green.033
+    3300164: Ship 2 Green.034
+    3300166: Ship 2 Green.035
+    3300168: Ship 2 Green.036
+    3300170: Ship 2 Green.037
+    3300172: Ship 2 Purple.004
+    3300174: Ship 2 Purple.005
+    3300176: Ship 2 Purple.007
+    3300178: Ship 2 Purple.008
+    3300180: Ship 2 Purple.010
+    3300182: Ship 2 Purple.026
+    3300184: Ship 2 Purple.027
+    3300186: Ship 2 Purple.028
+    3300188: Ship 2 Purple.029
+    3300190: Ship 2 Purple.030
+    3300192: Ship 2 Purple.031
+    3300194: Ship 2 Purple.032
+    3300196: Ship 2 Purple.033
+    3300198: Ship 2 Purple.034
+    3300200: Ship 2 Purple.035
+    3300202: Ship 2 Purple.036
+    3300204: Ship 2 Purple.037
+    3300206: Ship 2 Red.001
+    3300208: Ship 2 Red.003
+    3300210: Ship 2 Red.004
+    3300212: Ship 2 Red.005
+    3300214: Ship 2 Red.006
+    3300216: Ship 2 Red.007
+    3300218: Ship 2 Red.008
+    3300220: Ship 2 Red.009
+    3300222: Ship 2 Red.010
+    3300224: Ship 2 Red.011
+    3300226: Ship 2 Red.012
+    3300228: Ship 2 Red.013
+    3300230: Ship 2 Red.016
+    3300232: Ship 2 Red.017
+    3300234: Ship 2 Red.018
+    3300236: Ship 2 Red.019
+    3300238: Ship 2 Red.029
+    3300240: Ship 3 Blue.001
+    3300242: Ship 3 Blue.004
+    3300244: Ship 3 Blue.010
+    3300246: Ship 3 Blue.011
+    3300248: Ship 3 Blue.012
+    3300250: Ship 3 Blue.013
+    3300252: Ship 3 Blue.014
+    3300254: Ship 3 Blue.015
+    3300256: Ship 3 Blue.017
+    3300258: Ship 3 Blue.019
+    3300260: Ship 3 Blue.020
+    3300262: Ship 3 Blue.021
+    3300264: Ship 3 Blue.022
+    3300266: Ship 3 Blue.023
+    3300268: Ship 3 Green
+    3300270: Ship 3 Green.001
+    3300272: Ship 3 Green.002
+    3300274: Ship 3 Green.003
+    3300276: Ship 3 Green.004
+    3300278: Ship 3 Green.006
+    3300280: Ship 3 Green.008
+    3300282: Ship 3 Green.009
+    3300284: Ship 3 Green.010
+    3300286: Ship 3 Green.011
+    3300288: Ship 3 Green.013
+    3300290: Ship 3 Green.019
+    3300292: Ship 3 Green.023
+    3300294: Ship 3 Purple.001
+    3300296: Ship 3 Purple.004
+    3300298: Ship 3 Purple.010
+    3300300: Ship 3 Purple.012
+    3300302: Ship 3 Purple.013
+    3300304: Ship 3 Purple.014
+    3300306: Ship 3 Purple.015
+    3300308: Ship 3 Purple.017
+    3300310: Ship 3 Purple.019
+    3300312: Ship 3 Purple.020
+    3300314: Ship 3 Purple.021
+    3300316: Ship 3 Purple.022
+    3300318: Ship 3 Purple.023
+    3300320: Ship 3 Red
+    3300322: Ship 3 Red.004
+    3300324: Ship 3 Red.010
+    3300326: Ship 3 Red.012
+    3300328: Ship 3 Red.013
+    3300330: Ship 3 Red.014
+    3300332: Ship 3 Red.015
+    3300334: Ship 3 Red.017
+    3300336: Ship 3 Red.019
+    3300338: Ship 3 Red.020
+    3300340: Ship 3 Red.021
+    3300342: Ship 3 Red.022
+    3300344: Ship 3 Red.023
+    3300346: Ship 4 Blue.001
+    3300348: Ship 4 Blue.003
+    3300350: Ship 4 Blue.005
+    3300352: Ship 4 Blue.009
+    3300354: Ship 4 Blue.010
+    3300356: Ship 4 Blue.016
+    3300358: Ship 4 Blue.028
+    3300360: Ship 4 Green.001
+    3300362: Ship 4 Green.003
+    3300364: Ship 4 Green.005
+    3300366: Ship 4 Green.009
+    3300368: Ship 4 Green.010
+    3300370: Ship 4 Green.016
+    3300372: Ship 4 Green.028
+    3300374: Ship 4 Purple.011
+    3300376: Ship 4 Purple.017
+    3300378: Ship 4 Purple.018
+    3300380: Ship 4 Purple.022
+    3300382: Ship 4 Purple.024
+    3300384: Ship 4 Purple.027
+    3300386: Ship 4 Purple.028
+    3300388: Ship 4 Red
+    3300390: Ship 4 Red.003
+    3300392: Ship 4 Red.005
+    3300394: Ship 4 Red.009
+    3300396: Ship 4 Red.010
+    3300398: Ship 4 Red.016
+    3300400: Ship 4 Red.028
+    3300402: Ship 5 Blue
+    3300404: Ship 5 Blue.001
+    3300406: Ship 5 Blue.002
+    3300408: Ship 5 Blue.007
+    3300410: Ship 5 Blue.008
+    3300412: Ship 5 Blue.009
+    3300414: Ship 5 Blue.010
+    3300416: Ship 5 Green
+    3300418: Ship 5 Green.001
+    3300420: Ship 5 Green.002
+    3300422: Ship 5 Green.003
+    3300424: Ship 5 Green.008
+    3300426: Ship 5 Green.009
+    3300428: Ship 5 Green.010
+    3300430: Ship 5 Purple
+    3300432: Ship 5 Purple.001
+    3300434: Ship 5 Purple.002
+    3300436: Ship 5 Purple.007
+    3300438: Ship 5 Purple.008
+    3300440: Ship 5 Purple.009
+    3300442: Ship 5 Purple.010
+    3300444: Ship 5 Red
+    3300446: Ship 5 Red.001
+    3300448: Ship 5 Red.002
+    3300450: Ship 5 Red.007
+    3300452: Ship 5 Red.008
+    3300454: Ship 5 Red.009
+    3300456: Ship 5 Red.010
+    3300458: Ship 6 Blue.002
+    3300460: Ship 6 Blue.004
+    3300462: Ship 6 Blue.005
+    3300464: Ship 6 Blue.006
+    3300466: Ship 6 Blue.008
+    3300468: Ship 6 Blue.010
+    3300470: Ship 6 Blue.017
+    3300472: Ship 6 Green.001
+    3300474: Ship 6 Green.007
+    3300476: Ship 6 Green.009
+    3300478: Ship 6 Green.011
+    3300480: Ship 6 Green.012
+    3300482: Ship 6 Green.013
+    3300484: Ship 6 Green.015
+    3300486: Ship 6 Purple.002
+    3300488: Ship 6 Purple.004
+    3300490: Ship 6 Purple.005
+    3300492: Ship 6 Purple.006
+    3300494: Ship 6 Purple.008
+    3300496: Ship 6 Purple.010
+    3300498: Ship 6 Purple.017
+    3300500: Ship 6 Red.002
+    3300502: Ship 6 Red.004
+    3300504: Ship 6 Red.005
+    3300506: Ship 6 Red.006
+    3300508: Ship 6 Red.008
+    3300510: Ship 6 Red.010
+    3300512: Ship 6 Red.017
+    3300514: Ship 7 Blue.002
+    3300516: Ship 7 Blue.003
+    3300518: Ship 7 Blue.020
+    3300520: Ship 7 Blue.021
+    3300522: Ship 7 Blue.023
+    3300524: Ship 7 Green.015
+    3300526: Ship 7 Green.016
+    3300528: Ship 7 Green.018
+    3300530: Ship 7 Green.020
+    3300532: Ship 7 Green.021
+    3300534: Ship 7 Purple.002
+    3300536: Ship 7 Purple.003
+    3300538: Ship 7 Purple.020
+    3300540: Ship 7 Purple.021
+    3300542: Ship 7 Purple.023
+    3300544: Ship 7 Red.002
+    3300546: Ship 7 Red.003
+    3300548: Ship 7 Red.005
+    3300550: Ship 7 Red.007
+    3300552: Ship 7 Red.018
+    4300000: Ship 1 Red.001
+    4300002: Ship 1 Red.013
+    4300004: Ship 1 Red.014
+    4300006: Ship 1 Red.016
+    4300008: Ship 1 Red.017
+    4300010: Ship 1 Red.019
+    4300012: Ship 1 Blue
+    4300014: Ship 1 Blue.012
+    4300016: Ship 1 Blue.013
+    4300018: Ship 1 Blue.015
+    4300020: Ship 1 Blue.016
+    4300022: Ship 1 Blue.018
+    4300024: Ship 1 Green
+    4300026: Ship 1 Green.013
+    4300028: Ship 1 Green.014
+    4300030: Ship 1 Green.016
+    4300032: Ship 1 Green.017
+    4300034: Ship 1 Green.019
+    4300036: Ship 1 Green.041Ship 1 Purple
+    4300038: Ship 1 Green.028Ship 1 Purple
+    4300040: Ship 1 Green.027Ship 1 Purple
+    4300042: Ship 1 Green.025Ship 1 Purple
+    4300044: Ship 1 Green.024Ship 1 Purple
+    4300046: Ship 1 Green.022Ship 1 Purple
+    4300048: Ship 2 Red.029
+    4300050: Ship 2 Red.001
+    4300052: Ship 2 Red.003
+    4300054: Ship 2 Red.004
+    4300056: Ship 2 Red.005
+    4300058: Ship 2 Red.006
+    4300060: Ship 2 Red.007
+    4300062: Ship 2 Red.008
+    4300064: Ship 2 Red.009
+    4300066: Ship 2 Red.010
+    4300068: Ship 2 Red.011
+    4300070: Ship 2 Red.012
+    4300072: Ship 2 Red.013
+    4300074: Ship 2 Red.016
+    4300076: Ship 2 Red.017
+    4300078: Ship 2 Red.018
+    4300080: Ship 2 Red.019
+    4300082: Ship 2 BlueCube.181Ship 2 Blue
+    4300084: Ship 2 BlueCube.180Ship 2 Blue
+    4300086: Ship 2 BlueCube.178Ship 2 Blue
+    4300088: Ship 2 BlueCube.177Ship 2 Blue
+    4300090: Ship 2 BlueCube.175Ship 2 Blue
+    4300092: Ship 2 BlueCylinder.144Ship 2 Blue
+    4300094: Ship 2 BlueCylinder.143Ship 2 Blue
+    4300096: Ship 2 BlueCylinder.142Ship 2 Blue
+    4300098: Ship 2 BlueCylinder.141Ship 2 Blue
+    4300100: Ship 2 BlueCylinder.140Ship 2 Blue
+    4300102: Ship 2 BlueCylinder.139Ship 2 Blue
+    4300104: Ship 2 BlueCylinder.138Ship 2 Blue
+    4300106: Ship 2 BlueCylinder.137Ship 2 Blue
+    4300108: Ship 2 BlueCylinder.136Ship 2 Blue
+    4300110: Ship 2 BlueCylinder.003Ship 2 Blue
+    4300112: Ship 2 BlueCylinder.002Ship 2 Blue
+    4300114: Ship 2 BlueCylinder.001Ship 2 Blue
+    4300116: Ship 2 Green.016
+    4300118: Ship 2 Green.018
+    4300120: Ship 2 Green.019
+    4300122: Ship 2 Green.021
+    4300124: Ship 2 Green.022
+    4300126: Ship 2 Green.026
+    4300128: Ship 2 Green.027
+    4300130: Ship 2 Green.028
+    4300132: Ship 2 Green.029
+    4300134: Ship 2 Green.030
+    4300136: Ship 2 Green.031
+    4300138: Ship 2 Green.032
+    4300140: Ship 2 Green.033
+    4300142: Ship 2 Green.034
+    4300144: Ship 2 Green.035
+    4300146: Ship 2 Green.036
+    4300148: Ship 2 Green.037
+    4300150: Ship 2 Purple.004
+    4300152: Ship 2 Purple.005
+    4300154: Ship 2 Purple.007
+    4300156: Ship 2 Purple.008
+    4300158: Ship 2 Purple.010
+    4300160: Ship 2 Purple.026
+    4300162: Ship 2 Purple.027
+    4300164: Ship 2 Purple.028
+    4300166: Ship 2 Purple.029
+    4300168: Ship 2 Purple.030
+    4300170: Ship 2 Purple.031
+    4300172: Ship 2 Purple.032
+    4300174: Ship 2 Purple.033
+    4300176: Ship 2 Purple.034
+    4300178: Ship 2 Purple.035
+    4300180: Ship 2 Purple.036
+    4300182: Ship 2 Purple.037
+    4300184: Ship 3 Red.004
+    4300186: Ship 3 Red.013
+    4300188: Ship 3 Red.010
+    4300190: Ship 3 Red.012
+    4300192: Ship 3 Red
+    4300194: Ship 3 Red.014
+    4300196: Ship 3 Red.015
+    4300198: Ship 3 Red.017
+    4300200: Ship 3 Red.019
+    4300202: Ship 3 Red.020
+    4300204: Ship 3 Red.021
+    4300206: Ship 3 Red.022
+    4300208: Ship 3 Red.023
+    4300210: Ship 3 Blue.001
+    4300212: Ship 3 Blue.004
+    4300214: Ship 3 Blue.010
+    4300216: Ship 3 Blue.011
+    4300218: Ship 3 Blue.012
+    4300220: Ship 3 Blue.013
+    4300222: Ship 3 Blue.014
+    4300224: Ship 3 Blue.015
+    4300226: Ship 3 Blue.017
+    4300228: Ship 3 Blue.019
+    4300230: Ship 3 Blue.020
+    4300232: Ship 3 Blue.021
+    4300234: Ship 3 Blue.022
+    4300236: Ship 3 Blue.023
+    4300238: Ship 3 Green.001
+    4300240: Ship 3 Green
+    4300242: Ship 3 Green.002
+    4300244: Ship 3 Green.003
+    4300246: Ship 3 Green.004
+    4300248: Ship 3 Green.006
+    4300250: Ship 3 Green.008
+    4300252: Ship 3 Green.009
+    4300254: Ship 3 Green.010
+    4300256: Ship 3 Green.011
+    4300258: Ship 3 Green.013
+    4300260: Ship 3 Green.019
+    4300262: Ship 3 Green.023
+    4300264: Ship 3 Purple.001
+    4300266: Ship 3 Purple.004
+    4300268: Ship 3 Purple.010
+    4300270: Ship 3 Purple.012
+    4300272: Ship 3 Purple.013
+    4300274: Ship 3 Purple.014
+    4300276: Ship 3 Purple.015
+    4300278: Ship 3 Purple.017
+    4300280: Ship 3 Purple.019
+    4300282: Ship 3 Purple.020
+    4300284: Ship 3 Purple.021
+    4300286: Ship 3 Purple.022
+    4300288: Ship 3 Purple.023
+    4300290: Ship 4 Red.005
+    4300292: Ship 4 Red.003
+    4300294: Ship 4 Red.010
+    4300296: Ship 4 Red.009
+    4300298: Ship 4 Red
+    4300300: Ship 4 Red.016
+    4300302: Ship 4 Red.028
+    4300304: Ship 4 Blue.001
+    4300306: Ship 4 Blue.003
+    4300308: Ship 4 Blue.005
+    4300310: Ship 4 Blue.009
+    4300312: Ship 4 Blue.010
+    4300314: Ship 4 Blue.016
+    4300316: Ship 4 Blue.028
+    4300318: Ship 4 Green.001
+    4300320: Ship 4 Green.003
+    4300322: Ship 4 Green.005
+    4300324: Ship 4 Green.009
+    4300326: Ship 4 Green.010
+    4300328: Ship 4 Green.016
+    4300330: Ship 4 Green.028
+    4300332: Ship 4 Purple.011
+    4300334: Ship 4 Purple.017
+    4300336: Ship 4 Purple.018
+    4300338: Ship 4 Purple.022
+    4300340: Ship 4 Purple.024
+    4300342: Ship 4 Purple.027
+    4300344: Ship 4 Purple.028
+    4300346: Ship 5 Red
+    4300348: Ship 5 Red.001
+    4300350: Ship 5 Red.002
+    4300352: Ship 5 Red.007
+    4300354: Ship 5 Red.008
+    4300356: Ship 5 Red.009
+    4300358: Ship 5 Red.010
+    4300360: Ship 5 Purple.001
+    4300362: Ship 5 Purple
+    4300364: Ship 5 Purple.002
+    4300366: Ship 5 Purple.007
+    4300368: Ship 5 Purple.008
+    4300370: Ship 5 Purple.009
+    4300372: Ship 5 Purple.010
+    4300374: Ship 5 Green.001
+    4300376: Ship 5 Green
+    4300378: Ship 5 Green.002
+    4300380: Ship 5 Green.003
+    4300382: Ship 5 Green.008
+    4300384: Ship 5 Green.009
+    4300386: Ship 5 Green.010
+    4300388: Ship 5 Blue.001
+    4300390: Ship 5 Blue
+    4300392: Ship 5 Blue.002
+    4300394: Ship 5 Blue.007
+    4300396: Ship 5 Blue.008
+    4300398: Ship 5 Blue.009
+    4300400: Ship 5 Blue.010
+    4300402: Ship 6 Red.017
+    4300404: Ship 6 Red.002
+    4300406: Ship 6 Red.004
+    4300408: Ship 6 Red.005
+    4300410: Ship 6 Red.006
+    4300412: Ship 6 Red.008
+    4300414: Ship 6 Red.010
+    4300416: Ship 6 Purple.002
+    4300418: Ship 6 Purple.004
+    4300420: Ship 6 Purple.005
+    4300422: Ship 6 Purple.006
+    4300424: Ship 6 Purple.008
+    4300426: Ship 6 Purple.010
+    4300428: Ship 6 Purple.017
+    4300430: Ship 6 Green.001
+    4300432: Ship 6 Green.007
+    4300434: Ship 6 Green.009
+    4300436: Ship 6 Green.011
+    4300438: Ship 6 Green.012
+    4300440: Ship 6 Green.013
+    4300442: Ship 6 Green.015
+    4300444: Ship 6 Blue.002
+    4300446: Ship 6 Blue.004
+    4300448: Ship 6 Blue.005
+    4300450: Ship 6 Blue.006
+    4300452: Ship 6 Blue.008
+    4300454: Ship 6 Blue.010
+    4300456: Ship 6 Blue.017
+    4300458: Ship 7 Red.018
+    4300460: Ship 7 Red.002
+    4300462: Ship 7 Red.003
+    4300464: Ship 7 Red.005
+    4300466: Ship 7 Red.007
+    4300468: Ship 10 Red
+    4300470: Ship 10 Red.001
+    4300472: Ship 10 Red.002
+    4300474: Ship 10 Red.003
+    4300476: Ship 10 Red.004
+    4300478: Ship 10 Red.005
+    4300480: Ship 10 Red.006
+    4300482: Ship 7 Blue.023
+    4300484: Ship 7 Blue.002
+    4300486: Ship 7 Blue.003
+    4300488: Ship 7 Blue.020
+    4300490: Ship 7 Blue.021
+    4300492: Ship 7 Green.015
+    4300494: Ship 7 Green.016
+    4300496: Ship 7 Green.018
+    4300498: Ship 7 Green.020
+    4300500: Ship 7 Green.021
+    4300502: Ship 7 Purple.023
+    4300504: Ship 7 Purple.002
+    4300506: Ship 7 Purple.003
+    4300508: Ship 7 Purple.020
+    4300510: Ship 7 Purple.021
+    4300512: Ship 10 Blue.001
+    4300514: Ship 10 Blue
+    4300516: Ship 10 Blue.002
+    4300518: Ship 10 Blue.003
+    4300520: Ship 10 Blue.004
+    4300522: Ship 10 Blue.005
+    4300524: Ship 10 Blue.006
+    4300526: Ship 10 Green.005
+    4300528: Ship 10 Green.006
+    4300530: Ship 10 Green.007
+    4300532: Ship 10 Green.008
+    4300534: Ship 10 Green.009
+    4300536: Ship 10 Green.010
+    4300538: Ship 10 Green.011
+    4300540: Ship 10 Purple.001
+    4300542: Ship 10 Purple
+    4300544: Ship 10 Purple.002
+    4300546: Ship 10 Purple.003
+    4300548: Ship 10 Purple.004
+    4300550: Ship 10 Purple.005
+    4300552: Ship 10 Purple.006
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
