@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Serialization;
-using Debug = System.Diagnostics.Debug;
+﻿using UnityEngine;
 
 namespace BattleShip
 {

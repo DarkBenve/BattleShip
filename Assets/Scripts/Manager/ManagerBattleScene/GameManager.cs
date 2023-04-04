@@ -12,7 +12,7 @@ namespace BattleShip
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private Camera mainCamera;
-        [SerializeField] private TextMeshProUGUI textDebugTurn;
+        [SerializeField] private SpriteRenderer textDebug;
         [SerializeField] private TextMeshProUGUI textDebugShipHitPlayer;
         [SerializeField] private TextMeshProUGUI textDebugShipHitEnemy;
         [SerializeField] private GameObject panelEndGame;
@@ -52,11 +52,11 @@ namespace BattleShip
             textDebugShipHitEnemy.text = "Player1: \nNavi nemiche affondate = " + nShipDeathEnemy;
             textDebugShipHitPlayer.text = "Player2: \nNavi nemiche affondate = "+ nShipDeathPlayer;
             if (nShipDeathEnemy >= 9) {
-                textDebugTurn.text = "Hai Vinto";
+                Debug.Log("You Win");
                 panelEndGame.SetActive(true);
             }
             else if (nShipDeathPlayer >= 9) {
-                textDebugTurn.text = "Hai Perso";
+                Debug.Log("You Lose");
                 panelEndGame.SetActive(true);
             }
         }
@@ -65,13 +65,14 @@ namespace BattleShip
         {
             if (ManagerBattleSystem._isTurnEnemy) {
                 if (nShipDeathEnemy < 10) {
-                    textDebugTurn.text = "Is Turn of Enemy";
+                    textDebug.flipX = false;
                     StartCoroutine(ManagerBattleSystem.TurnEnemy());
                 }
             }
 
             if (ManagerBattleSystem._isTurnPlayer) {
-                textDebugTurn.text = "Is Turn of Player";
+                StopCoroutine(ManagerBattleSystem.TurnEnemy());
+                textDebug.flipX = true;
             }
         }
 

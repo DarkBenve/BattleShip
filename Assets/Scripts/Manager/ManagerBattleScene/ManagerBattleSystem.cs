@@ -36,21 +36,19 @@ namespace BattleShip
         public static IEnumerator TurnEnemy()
         {
             yield return new WaitForSeconds(5);
-            //Attack Enemy
             int x = Random.Range(0, 10);
             int y = Random.Range(0, 10);
             while (_isTurnEnemy) {
                 if (AttackEnemy(x, y)) {
-                    // yield return new WaitForSeconds(2);
-                    yield return new WaitForSeconds(2);
+                    yield return new WaitForSeconds(1);
                 }
                 else {
 
                     _isTurnEnemy = false;
-                    yield return new WaitForSeconds(3f);
                 }
             }
             _isTurnPlayer = true;
+            yield return new WaitForSeconds(5f);
             yield return null;
         }
     }
