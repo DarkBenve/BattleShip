@@ -29,12 +29,14 @@ namespace BattleShip
         public bool isDeath;
         public ShipData _shipData;
         private Vector3 _transformLocalScale;
+        private Animator _animator;
 
         private int _k = 0;
         private void Start()
         {
             _shipData = new ShipData(sizeShip);
             isDeath = false;
+            _animator = GetComponent<Animator>();
         }
 
         private void Update()
@@ -51,6 +53,8 @@ namespace BattleShip
                 if (shipType == TypeShip.PlayerShip) {
                     DeathShipPlayer();
                 }
+
+                _animator.SetBool("isDeath", true);
             }
         }
 
@@ -60,7 +64,6 @@ namespace BattleShip
                 var meshRenderer = gameObject.GetComponentsInChildren<MeshRenderer>();
                 for (int i = 0; i < meshRenderer.Length; i++) {
                     meshRenderer[i].enabled = true;
-                    meshRenderer[i].material.color = Color.red;
                 }
                 GameManager._instance.nShipDeathEnemy++;
                 // Destroy(gameObject, 2.5f);
@@ -74,7 +77,6 @@ namespace BattleShip
                 var meshRenderer = gameObject.GetComponentsInChildren<MeshRenderer>();
                 for (int i = 0; i < meshRenderer.Length; i++) {
                     meshRenderer[i].enabled = true;
-                    meshRenderer[i].material.color = Color.red;
                 }
                 GameManager._instance.nShipDeathPlayer++;
                 // Destroy(gameObject, 2.5f);
