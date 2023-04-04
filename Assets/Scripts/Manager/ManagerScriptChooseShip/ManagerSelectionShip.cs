@@ -57,9 +57,9 @@ namespace BattleShip
         {
             previewShip.sprite = shipList[sizeShipIndex - 1].previewShip;
 
-            countSmallShipUI.text = "Ship Small\n" + currentNSmallShip + "/" + NMaxSmallShip;
-            countMediumShipUI.text = "Ship Medium\n" + currentNMediumShip + "/" + NMaxMediumShip;
-            countBigShipUI.text = "Ship Big\n" + currentNBigShip + "/" + NMaxBigShip;
+            countSmallShipUI.text = "StormBriger\n" + currentNSmallShip + "/" + NMaxSmallShip;
+            countMediumShipUI.text = "Goliath\n" + currentNMediumShip + "/" + NMaxMediumShip;
+            countBigShipUI.text = "Colossus\n" + currentNBigShip + "/" + NMaxBigShip;
 
             if (currentNSmallShip == NMaxSmallShip && currentNMediumShip == NMaxMediumShip && currentNBigShip == NMaxBigShip) {
                 buttonSelectGoBattle.SetActive(true);
