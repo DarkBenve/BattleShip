@@ -1,14 +1,23 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace BattleShip
 {
     public class TileEnemy : Tile
     {
+        private Turret _turret;
+
+        private void Start()
+        {
+            _turret = GameObject.FindGameObjectWithTag("TurretPlayer").GetComponent<Turret>();
+        }
+
         private void OnMouseDown()
         {
             if (ManagerBattleSystem._isTurnPlayer) {
                 if (!isSelectedThisTile) {
+                    //Qui Fare lo sparo della torretta
                     if (ship != null && objectInTile == ObjectInTile.Ship) {
                         ship._shipData._health--;
                         objectInTile = ObjectInTile.Water;
