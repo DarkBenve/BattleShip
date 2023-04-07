@@ -40,6 +40,8 @@ namespace BattleShip
             int y = Random.Range(0, 10);
             while (_isTurnEnemy) {
                 if (AttackEnemy(x, y)) {
+                    x = Random.Range(0, 10);
+                    y = Random.Range(0, 10);
                     yield return new WaitForSeconds(1);
                 }
                 else {
