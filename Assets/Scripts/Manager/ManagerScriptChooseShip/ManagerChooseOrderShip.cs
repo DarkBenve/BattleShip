@@ -42,39 +42,40 @@ namespace BattleShip
                         Vector2 coordinated = GetCoordinate(nameObjectHit);
                         if (shipSelected.sizeShip == 1) {
                             if (ManagerSelectionShip._instance.currentNSmallShip < ManagerSelectionShip.NMaxSmallShip) {
-                                ManagerSelectionShip._instance.currentNSmallShip++;
-                                PositionShipSingleTile(positionInWorld, coordinated, shipSelected);
-                                if (ManagerSelectionShip._instance.currentNSmallShip ==
-                                    ManagerSelectionShip.NMaxSmallShip) {
-                                    ManagerSelectionShip._instance.currentNSmallShip =
-                                        ManagerSelectionShip.NMaxSmallShip;
-                                    shipSelected = null;
+                                if (PositionShipSingleTile(positionInWorld, coordinated, shipSelected)) {
+                                    ManagerSelectionShip._instance.currentNSmallShip++;
+                                    if (ManagerSelectionShip._instance.currentNSmallShip == ManagerSelectionShip.NMaxSmallShip) {
+                                        ManagerSelectionShip._instance.currentNSmallShip =
+                                            ManagerSelectionShip.NMaxSmallShip;
+                                        shipSelected = null;
+                                    }
                                 }
                             }
                         }
 
                         if (shipSelected.sizeShip == 2) {
-                            if (ManagerSelectionShip._instance.currentNMediumShip <
-                                ManagerSelectionShip.NMaxMediumShip) {
-                                if (PositionShipDoubleTile(positionInWorld, coordinated, shipSelected, hit))
+                            if (ManagerSelectionShip._instance.currentNMediumShip < ManagerSelectionShip.NMaxMediumShip) {
+                                if (PositionShipDoubleTile(positionInWorld, coordinated, shipSelected, hit)) {
                                     ManagerSelectionShip._instance.currentNMediumShip++;
-                                if (ManagerSelectionShip._instance.currentNMediumShip ==
-                                    ManagerSelectionShip.NMaxMediumShip) {
-                                    ManagerSelectionShip._instance.currentNMediumShip =
-                                        ManagerSelectionShip.NMaxMediumShip;
-                                    shipSelected = null;
+                                    if (ManagerSelectionShip._instance.currentNMediumShip ==
+                                        ManagerSelectionShip.NMaxMediumShip) {
+                                        ManagerSelectionShip._instance.currentNMediumShip =
+                                            ManagerSelectionShip.NMaxMediumShip;
+                                        shipSelected = null;
+                                    }
                                 }
                             }
                         }
 
                         if (shipSelected.sizeShip == 3) {
                             if (ManagerSelectionShip._instance.currentNBigShip < ManagerSelectionShip.NMaxBigShip) {
-                                if (PositionShipTripleTile(positionInWorld, coordinated, shipSelected, hit))
+                                if (PositionShipTripleTile(positionInWorld, coordinated, shipSelected, hit)) {
                                     ManagerSelectionShip._instance.currentNBigShip++;
-                                if (ManagerSelectionShip._instance.currentNBigShip ==
-                                    ManagerSelectionShip.NMaxBigShip) {
-                                    ManagerSelectionShip._instance.currentNBigShip = ManagerSelectionShip.NMaxBigShip;
-                                    shipSelected = null;
+                                    if (ManagerSelectionShip._instance.currentNBigShip ==
+                                        ManagerSelectionShip.NMaxBigShip) {
+                                        ManagerSelectionShip._instance.currentNBigShip = ManagerSelectionShip.NMaxBigShip;
+                                        shipSelected = null;
+                                    }
                                 }
                             }
                         }
@@ -88,126 +89,153 @@ namespace BattleShip
             return ship;
         }
 
-        private void PositionShipSingleTile(Vector3 positionInWorld, Vector2 coordinatedLogic, Ship ship)
+        private bool PositionShipSingleTile(Vector3 positionInWorld, Vector2 coordinatedLogic, Ship ship)
         {
-            //prima di posizionare la nave si sceglie la direzione che deve avere
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.Ship;
-            var shipInTile = Instantiate(ship, positionInWorld, Quaternion.identity);
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = shipInTile;
-            matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-            shipInTile.transform.SetParent(_containerPlayerTile);
+            if (matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile == ObjectInTile.Water) {
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.Ship;
+                var shipInTile = Instantiate(ship, positionInWorld, Quaternion.identity);
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = shipInTile;
+                matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                shipInTile.transform.SetParent(_containerPlayerTile);
+                return true;
+            }
+
+            return false;
         }
 
         private bool PositionShipDoubleTile(Vector3 positionWorld, Vector2 coordinatedLogic, Ship ship, RaycastHit hit)
         {
-            int count = 0;
+            if (matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile ==
+                ObjectInTile.Water) {
+                int count = 0;
 
-            if (ManagerSelectionShip._instance.isRotate) {
-                for (int i = 0; i < 1; i++) {
-                    if (coordinatedLogic.x + i < widthMatrix - 1) {
-                        count++;
+                if (ManagerSelectionShip._instance.isRotate) {
+                    for (int i = 0; i < 1; i++) {
+                        if (coordinatedLogic.x + i < widthMatrix - 1) {
+                            count++;
+                        }
+                    }
+
+                    if (count == 1) {
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
+                        Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship = instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                        instantiate.transform.Rotate(new Vector3(0, 90, 0));
+                        instantiate.transform.SetParent(_containerPlayerTile);
+                        return true;
+                    }
+                    else {
+                        Tile tile = hit.collider.gameObject.GetComponent<Tile>();
+                        tile.meshRenderer.material.color = Color.red;
                     }
                 }
-
-                if (count == 1) {
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-                    Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-                    instantiate.transform.Rotate(new Vector3(0, 90, 0));
-                    instantiate.transform.SetParent(_containerPlayerTile);
-                    return true;
-                }
                 else {
-                    Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.meshRenderer.material.color = Color.red;
-                }
-            }
-            else {
-                for (int i = 0; i < 1; i++) {
-                    if (coordinatedLogic.y + i < heightMatrix - 1) {
-                        count++;
+                    for (int i = 0; i < 1; i++) {
+                        if (coordinatedLogic.y + i < heightMatrix - 1) {
+                            count++;
+                        }
+                    }
+
+                    if (count == 1) {
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
+                        var instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship = instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship.shipType = TypeShip.PlayerShip;
+                        instantiate.transform.SetParent(_containerPlayerTile);
+                        return true;
+                    }
+                    else {
+                        Tile tile = hit.collider.gameObject.GetComponent<Tile>();
+                        tile.meshRenderer.material.color = Color.red;
                     }
                 }
-
-                if (count == 1) {
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
-                    var instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship.shipType = TypeShip.PlayerShip;
-                    instantiate.transform.SetParent(_containerPlayerTile);
-                    return true;
-                }
-                else {
-                    Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.meshRenderer.material.color = Color.red;
-                }
             }
+
             return default;
         }
 
         private bool PositionShipTripleTile(Vector3 positionWorld, Vector2 coordinatedLogic, Ship ship, RaycastHit hit)
         {
-            int count = 0;
+            if (matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile ==
+                ObjectInTile.Water) {
+                int count = 0;
 
 
-            if (ManagerSelectionShip._instance.isRotate) {
-                for (int i = 0; i < 2; i++) {
-                    if (coordinatedLogic.x + i < widthMatrix - 1) {
-                        count++;
+                if (ManagerSelectionShip._instance.isRotate) {
+                    for (int i = 0; i < 2; i++) {
+                        if (coordinatedLogic.x + i < widthMatrix - 1) {
+                            count++;
+                        }
+                    }
+
+                    if (count == 2) {
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile =
+                            ObjectInTile.PartOfShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].objectInTile =
+                            ObjectInTile.PartOfShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].objectInTile =
+                            ObjectInTile.PartOfShip;
+                        Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship =
+                            instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].ship =
+                            instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType =
+                            TypeShip.PlayerShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship.shipType =
+                            TypeShip.PlayerShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].ship.shipType =
+                            TypeShip.PlayerShip;
+                        instantiate.transform.Rotate(new Vector3(0, 90, 0));
+                        instantiate.transform.SetParent(_containerPlayerTile);
+                        return true;
+                    }
+                    else {
+                        Tile tile = hit.collider.gameObject.GetComponent<Tile>();
+                        tile.meshRenderer.material.color = Color.red;
                     }
                 }
-
-                if (count == 2) {
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-                    Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 1, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x + 2, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-                    instantiate.transform.Rotate(new Vector3(0, 90, 0));
-                    instantiate.transform.SetParent(_containerPlayerTile);
-                    return true;
-                }
                 else {
-                    Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.meshRenderer.material.color = Color.red;
-                }
-            }
-            else {
-                for (int i = 0; i < 2; i++) {
-                    if (coordinatedLogic.y + i < heightMatrix - 1) {
-                        count++;
+                    for (int i = 0; i < 2; i++) {
+                        if (coordinatedLogic.y + i < heightMatrix - 1) {
+                            count++;
+                        }
                     }
-                }
 
-                if (count == 2) {
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile = ObjectInTile.PartOfShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile = ObjectInTile.PartOfShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].objectInTile = ObjectInTile.PartOfShip;
-                    Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].ship = instantiate;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType = TypeShip.PlayerShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship.shipType = TypeShip.PlayerShip;
-                    matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].ship.shipType = TypeShip.PlayerShip;
-                    instantiate.transform.SetParent(_containerPlayerTile);
-                    return true;
-                }
-                else {
-                    Tile tile = hit.collider.gameObject.GetComponent<Tile>();
-                    tile.meshRenderer.material.color = Color.red;
+                    if (count == 2) {
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].objectInTile =
+                            ObjectInTile.PartOfShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].objectInTile =
+                            ObjectInTile.PartOfShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].objectInTile =
+                            ObjectInTile.PartOfShip;
+                        Ship instantiate = Instantiate(ship, positionWorld, Quaternion.identity);
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship = instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship =
+                            instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].ship =
+                            instantiate;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y].ship.shipType =
+                            TypeShip.PlayerShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 1].ship.shipType =
+                            TypeShip.PlayerShip;
+                        matrixPlayer._matrixPlayer[(int)coordinatedLogic.x, (int)coordinatedLogic.y + 2].ship.shipType =
+                            TypeShip.PlayerShip;
+                        instantiate.transform.SetParent(_containerPlayerTile);
+                        return true;
+                    }
+                    else {
+                        Tile tile = hit.collider.gameObject.GetComponent<Tile>();
+                        tile.meshRenderer.material.color = Color.red;
+                    }
                 }
             }
 
