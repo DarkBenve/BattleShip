@@ -14,6 +14,13 @@ namespace BattleShip
             ClosePanelMultiplayer();
         }
 
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(0)) {
+                panelMultiplayerChoose.SetActive(false);
+            }
+        }
+
         public void StartSingleGame()
         {
             SceneManager.LoadScene("OrderShip");
