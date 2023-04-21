@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1931439792472406331}
   - component: {fileID: 1931439792471309307}
   - component: {fileID: 3231670520743216353}
+  - component: {fileID: -4804150625587874448}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -100,3 +101,62 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4804150625587874448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931439792473302329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a663c0ca897499394e2d439edb0132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.0069918633
+      outSlope: -0.0069918633
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 1
+      inSlope: -0.012531698
+      outSlope: -0.012531698
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 5
+      value: 0
+      inSlope: -1.3369637
+      outSlope: -1.3369637
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.31556976
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  destroyShip: {fileID: 4376620636205789668, guid: e30cb35bac5f5e74b897c26b5dbcbc37,
+    type: 3}
+  destroyWater: {fileID: 8966515247286567573, guid: 7f17e50f71ce4a0408fbf88410f74b7c,
+    type: 3}
+  startPosition: {x: -3.7670255, y: 3.0000002, z: 4.8232317}

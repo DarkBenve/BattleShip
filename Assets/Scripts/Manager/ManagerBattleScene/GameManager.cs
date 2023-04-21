@@ -23,6 +23,8 @@ namespace BattleShip
         private Animator _animator;
         public int nShipDeathEnemy;
         public int nShipDeathPlayer;
+        public Transform destinationShoot;
+        public bool isSelected;
 
         private void Awake()
         {
