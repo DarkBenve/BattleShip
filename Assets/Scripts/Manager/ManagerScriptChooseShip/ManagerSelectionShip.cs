@@ -23,6 +23,7 @@ namespace BattleShip
         [SerializeField] private GameObject buttonSelectGoBattle;
         [SerializeField] private GameObject buttonRotateShip;
         [SerializeField] private Image previewShip;
+        [SerializeField] private int sizeShipIndex;
 
         public const int NMaxSmallShip = 4;
         public const int NMaxMediumShip = 3;
@@ -35,7 +36,6 @@ namespace BattleShip
         public bool isRotate;
         public bool isReadyGoBattle;
         private TextMeshProUGUI _textRotate;
-        [FormerlySerializedAs("_sizeShipIndex")] [SerializeField] private int sizeShipIndex;
 
         private void Start()
         {
