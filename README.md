@@ -5,7 +5,7 @@ Benvenuti al repository di Battaglia Navale! In questo repository troverete il c
 Introduzione
 La Battaglia Navale è un gioco da tavolo tradizionale in cui due giocatori si sfidano per cercare e affondare le navi nemiche. Ognuno dei giocatori dispone di una griglia di gioco, in cui posiziona le proprie navi e cerca di colpire quelle dell'avversario.
 
-Questo repository offre una versione digitale del gioco, in cui due giocatori possono sfidarsi online. Il gioco è progettato per essere eseguito da riga di comando e offre una semplice interfaccia per giocare.
+Questo repository offre una versione digitale del gioco, in cui due giocatori NON possono sfidarsi online, ma solo contro IA.
 
 ## Requirements
 PC
