@@ -21,7 +21,7 @@ cosa manca di importante
 
 ## Download / Links
 
-- links alle builds (se esterne a questo progetto)
+- link alla build --> https://drive.google.com/file/d/1pKMOh7tC5tHA_FcO_C0k6ZbELVvhKUSr/view?usp=sharing
 
 ## Team
 
