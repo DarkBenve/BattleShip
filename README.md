@@ -1,20 +1,17 @@
-# Unity Project Template (rinominare)
+#
+Battaglia Navale
+Benvenuti al repository di Battaglia Navale! In questo repository troverete il codice sorgente e le istruzioni per un gioco classico di Battaglia Navale implementato in c#.
 
-eventuale sottotitolo / tagline
+Introduzione
+La Battaglia Navale è un gioco da tavolo tradizionale in cui due giocatori si sfidano per cercare e affondare le navi nemiche. Ognuno dei giocatori dispone di una griglia di gioco, in cui posiziona le proprie navi e cerca di colpire quelle dell'avversario.
 
-## Screenshots
-almeno 2, title e gameplay
-(mettere le immagini dentro _production/Marketing/Screenshots/)
-
-## Description
-in massimo due frasi sintetizzare il gioco
+Questo repository offre una versione digitale del gioco, in cui due giocatori possono sfidarsi online. Il gioco è progettato per essere eseguito da riga di comando e offre una semplice interfaccia per giocare.
 
 ## Requirements
-piattaforma/a su cui gira
+PC
 
 ## Rules
-semplici spiegazioni di come si gioca, i comandi
-altre cose utili se non sono autoesplicative nel gioco
+Mouse
 
 ## Challenges
 ovvero le peculiarità di questo progetto
@@ -25,8 +22,6 @@ cosa manca di importante
 ## Download / Links
 
 - links alle builds (se esterne a questo progetto)
-- links ai docs (se esterne a questo progetto)
-- links alla Trello Board/Issues (se esterne a questo progetto)
 
 ## Team
 
